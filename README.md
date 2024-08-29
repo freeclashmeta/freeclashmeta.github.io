@@ -1,4 +1,4 @@
-# 「8月28日」最高速度20.4M/S，2024年Clash Meta每天更新免费节点订阅链接  更新时间 2024-08-28 10:46:05
+# 「8月29日」最高速度20.2M/S，2024年Clash Meta每天更新免费节点订阅链接  更新时间 2024-08-29 08:50:11
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freeclashmeta.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,19 +9,19 @@
 
 ### Clash订阅链接
 
-- https://freeclashmeta.github.io/uploads/2024/08/0-20240828.yaml
-- https://freeclashmeta.github.io/uploads/2024/08/1-20240828.yaml
-- https://freeclashmeta.github.io/uploads/2024/08/2-20240828.yaml
-- https://freeclashmeta.github.io/uploads/2024/08/3-20240828.yaml
-- https://freeclashmeta.github.io/uploads/2024/08/4-20240828.yml
+- https://freeclashmeta.github.io/uploads/2024/08/0-20240829.yaml
+- https://freeclashmeta.github.io/uploads/2024/08/1-20240829.yaml
+- https://freeclashmeta.github.io/uploads/2024/08/2-20240829.yaml
+- https://freeclashmeta.github.io/uploads/2024/08/3-20240829.yaml
+- https://freeclashmeta.github.io/uploads/2024/08/4-20240829.yml
 
 ### V2ray订阅链接
 
-- https://freeclashmeta.github.io/uploads/2024/08/0-20240828.txt
-- https://freeclashmeta.github.io/uploads/2024/08/1-20240828.txt
-- https://freeclashmeta.github.io/uploads/2024/08/2-20240828.txt
-- https://freeclashmeta.github.io/uploads/2024/08/3-20240828.txt
-- https://freeclashmeta.github.io/uploads/2024/08/4-20240828.txt
+- https://freeclashmeta.github.io/uploads/2024/08/0-20240829.txt
+- https://freeclashmeta.github.io/uploads/2024/08/1-20240829.txt
+- https://freeclashmeta.github.io/uploads/2024/08/2-20240829.txt
+- https://freeclashmeta.github.io/uploads/2024/08/3-20240829.txt
+- https://freeclashmeta.github.io/uploads/2024/08/4-20240829.txt
 
 ## 更多clash节点订阅 ：
 
