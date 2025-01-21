@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
         <link rel="canonical" href="https://freeclashmeta.github.io/news/article-43333.htm" />
@@ -26,6 +26,23 @@
     <!-- //web fonts -->
     <!-- Template CSS -->
     <link rel="stylesheet" href="/assets/website/css/freeclashmeta/style-starter.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SpringCloud基础（四）Spring Cloud Config：配置中心">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC0F2XP2Y3"></script>
 <script>
@@ -102,6 +119,7 @@
                   				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>Spring Cloud Config是一个分布式配置中心的解决方案，它为分布式系统提供了外部画的集中式管理功能，包含Config Server和Config Client</p> <p>简单来说，就是Spring Cloud Config利用git仓库进行配置维护。当有请求到达Config Server时，Config Server就会向git请求，拉取配置，让所有服务感知到配置文件。</p> </h1> <p>根据上一篇内容的项目构建，继续本次项目编写。</p> <p>新建项目，选择config server</p> <p><img fetchpriority="high" decoding="async" alt="" height="730" src="http://img.555519.xyz/uploads3/20220830/ba73a8c7d2a7b644346c0c718d506289.jpg"></p> <p>&nbsp;选择eureka client，完成构建</p> <p><img decoding="async" alt="" height="730" src="http://img.555519.xyz/uploads3/20220830/ffb47ec88ec6464efc3f4d25f9cdabee.jpg">&nbsp;在配置文件中，进行对应的配置</p> <pre><code>spring.application.name=spring-cloud-config-server server.port=8085  eureka.client.service-url.defaultZone=http://localhost:8081/eureka</code></pre> <p>&nbsp;配置完成后，还没有配置对应的git，因为Spring Cloud Config需要从git获取到配置，所以需要对git地址进行配置，在此就不放出用户名和密码了：</p> <pre><code>spring.cloud.config.server.git.uri=https://gitee.com/amidst_the_sun/spring-cloud-my-config-server.git spring.cloud.config.server.git.username= spring.cloud.config.server.git.password=</code></pre> <p>连接完成后，需要在git仓库中构建一个配置文件，如user.properties，内容如下：</p> <pre><code>spring.application.name=spring-cloud-user-provide server.port=8083 eureka.client.service-url.defaultZone=http://localhost:8081/eureka</code></pre> <p>可以对一个固定的url进行访问：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8085/test/user-a.properties"  title="http://localhost:8085/test/user-a.properties" rel="nofollow">http://localhost:8085/test/user-a.properties</a></p> <p>或者：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8085/test/user-a.json"  title="http://localhost:8085/test/user-a.json" rel="nofollow">http://localhost:8085/test/user-a.json</a></p> <p>为什么可以这样访问呢？</p> <p>这个配置文件的数据格式是可以在url的访问方式上进行定义，显示在网页上的数据格式也会呈现出对应的变化。</p> <p>定义的文件叫做user.properties，名字是user，但是直接用user作为名称是无法访问的，因为这有一种对应的映射关系。</p> <p>url和配置文件的映射关系，可以有以下几种访问方式：</p> <ol> <li>/{application}/{profile}/{lable}</li> <li>/{application}-{profile}.properties</li> <li>/{lable}/{application}-{profile}</li> </ol> <p>*application 应用</p> <p>*profile 环境（dev，prd，test）</p> <p>*label git仓库的分支名称，可以不写，默认为master</p> <p>因此，需要在user后面增加profile文件名作为访问路径，如果没有就随意定义一个就可以访问。</p> <p>再定义一个新的文件user-prd.properties</p> <pre><code>spring.application.name: spring-cloud-user-provide server.port: 8083 eureka.client.service-url.defaultZone: http://localhost:8081/eureka profile: prd</code></pre> <p>访问地址：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8085/user-prd.properties"  title="http://localhost:8085/user-prd.properties" rel="nofollow">http://localhost:8085/user-prd.properties</a></p> <p>可以建立新的分支test，创建文件user.properties，进行访问：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8085/test/user-a.properties"  title="http://localhost:8085/test/user-a.properties" rel="nofollow">http://localhost:8085/test/user-a.properties</a></p> <p>这样就验证完成了。</p> <p>除了指定文件，也可以指定文件的搜索范围，进行配置文件的分区隔离：</p> <pre><code>#相对搜索路径 spring.cloud.config.server.native.search-paths=</code></pre> <p>除了在git上进行定义，也可以在本地进行定义，配置为：</p> <pre><code>spring.profiles.active=native spring.cloud.config.server.native.search-locations=file:f:/properties/</code></pre> </h1> <h2>3.1、服务配置</h2> <p>简单的配置好config server肯定是不足以让其他服务读取到对应的git配置文件，想要做到这一点，还需要对各个服务进行配置。</p> <p>在一个需要进行统一配置管理的服务中，增加在git上的文件：spring-cloud-user-provide-prd.properties</p> <pre><code>spring.application.name=spring-cloud-user-provide server.port=8083 eureka.client.service-url.defaultZone=http://localhost:8081/eureka profile=prd</code></pre> <p>在对应的pom文件中，增加：</p> <pre><code>&lt;dependency&gt;     &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;     &lt;artifactId&gt;spring-cloud-config-client&lt;/artifactId&gt; &lt;/dependency&gt;</code></pre> <p>修改配置文件，去掉端口号，留下Eureka配置和服务名称，<br /> spring.cloud.config.discovery.service-id是config在eureka服务中的名称：</p> <pre><code>spring.application.name=spring-cloud-user-provide  spring.cloud.config.discovery.enabled=true spring.cloud.config.discovery.service-id=SPRING-CLOUD-CONFIG-SERVER spring.cloud.config.profile=test  eureka.client.service-url.defaultZone=http://localhost:8081/eureka</code></pre> <p>启动之后会发现，依旧找不到对应的配置文件，整个项目是按照对应的默认配置进行启动的。</p> <p>发生这种事情的原因是，git上的application.properties配置文件的优先级不够，优先加载本地的配置，为了能保证加载网络配置，还需要增加一个新的配置文件：bootstrap.properties，这个配置文件的加载优先级更高，能够保证一定会加载网络上配置中心的配置，由于版本的问题，2020.*之后的版本默认关闭了bootstrap.properties文件的加载，所以需要先增加jar包，在pom文件中添加：</p> <pre><code>&lt;dependency&gt;     &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;     &lt;artifactId&gt;spring-cloud-starter-bootstrap&lt;/artifactId&gt; &lt;/dependency&gt;</code></pre> <p>然后将application.properties配置文件中的配置复制到bootstrap.properties中，删除application.properties内容。</p> <p>启动项目，然后查看：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8085/spring-cloud-user-provide-prd.properties"  title="http://localhost:8085/spring-cloud-user-provide-prd.properties" rel="nofollow">http://localhost:8085/spring-cloud-user-provide-prd.properties</a></p> <p>确认配置生效后，查看Eureka的界面：</p> <p><img decoding="async" alt="" height="270" src="http://img.555519.xyz/uploads3/20220830/43b85add87488ecdc147fbc59180354d.jpg"></p> <p>&nbsp;发现项目确实已经按照config中的配置启动了。</p> <p>可以再创建一个spring-cloud-user-provide-test.properties文件，将配置中心的spring.cloud.config.profile改为test</p> <pre><code>spring.cloud.config.profile=test</code></pre> <p>就可以发现，这个配置被改为了test文件的配置。</p> <h2>3.2、统一配置</h2> <p>除了分开的各种配置文件，还可以创建一个不带后缀的文件：spring-cloud-user-provide.properties，这个文件中可以增加一个配置：</p> <pre><code>userName=Jensen</code></pre> <p>prd，test这两个配置文件在进行查看的时候，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8085/spring-cloud-user-provide-prd.properties"  title="http://localhost:8085/spring-cloud-user-provide-prd.properties" rel="nofollow">http://localhost:8085/spring-cloud-user-provide-prd.properties</a></p> <p>可以发现，spring-cloud-user-provide.properties配置文件配置的内容会出现在带后缀的配置文件内，spring-cloud-user-provide.properties就是总配置文件。</p> <p>在总配置文件中的内容，userName是可以用@Value注解来引用的</p> <pre><code class="language-java">@Value("${userName}") private String userName;</code></pre> <p>&nbsp;如果在获取到userName的配置值之后，再更新配置文件，就会发现，在项目里的userName变量值没有发生改变，也就说，配置的动态更新不会通知到项目。</p> <p>如果想实现动态更新，就要使用消息总线，Spring Cloud Bus</p> </h1> <p>想要实现动态更新，需要增加一些配置。</p> <p>首先要增加消息总线的jar包：</p> <pre><code>&lt;dependency&gt;     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;     &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt; &lt;/dependency&gt;</code></pre> <p>&nbsp;完成之后，在user-provider组件中增加配置，这个配置意味着可以监听配置的更新</p> <pre><code>management.endpoints.web.exposure.include=refresh</code></pre> <p>在user-provider组件中增加注解，@RefreshScope，开启刷新</p> <pre><code class="language-java">@RefreshScope @RestController public class UserController {      @Value("${userName}")     private String userName;      @GetMapping("/user")     public User queryUser() {         User user = new User();         user.setName("Lily");         user.setAge(18);         return user;     }      @GetMapping("/default")     public User queryDefaultUser() {         User user = new User();         user.setName(userName);         user.setAge(18);         return user;     }  }</code></pre> <p>之后再更新git上的配置内容，就会发现，数据还没有更新！</p> <p>因为想要项目感知到配置发生了变化，还需要主动进行一次刷新。</p> <p>以post方式执行接口：http://localhost:8083/actuator/refresh，可以看到结果：</p> <p><img loading="lazy" decoding="async" alt="" height="605" src="http://img.555519.xyz/uploads3/20220830/b936f7ba93818d94c452e55ddeccc7ff.jpg"></p> <p>可以看到，接口感知到配置版本更新了，哪一个配置项更新了，此刻再访问username接口，就可以发现，数据确实产生了变化。</p> <p>由此可见，想要自动感知配置变化，每次都需要执行一次接口，但这不现实。</p> <p>在gitee上，有一个功能：webhook</p> <p><img loading="lazy" decoding="async" alt="" height="737" src="http://img.555519.xyz/uploads3/20220830/87e7b5ed59227e0ff4506e001153f264.jpg"></p> <p>&nbsp;这个功能可以设定，在某些时候，比如代码被更新到库中时，执行某个方法，但是，这个方法必须要能被其他网络访问，也就是说，本地方法一定不行，必须要拥有一个服务器，在上面部署服务后，才能用这个功能进行配置更新。</p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-43332.htm">springboot实现WebAPI版本控制</a></p>
+                                        <p>下一个：<a href="/news/article-43837.htm">SpringSecurity核心服务详解</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -111,16 +129,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-28345.htm" title="领养宠物协议书范本图片模板高清（领养宠物协议有法律效力吗）">领养宠物协议书范本图片模板高清（领养宠物协议有法律效力吗）</a></li>
-                        <li class="py-2"><a href="/news/article-35017.htm" title="广东预制菜十大品牌">广东预制菜十大品牌</a></li>
-                        <li class="py-2"><a href="/news/article-31661.htm" title="小孩儿被猫抓伤需要打针吗（小孩被猫抓伤了要打疫苗吗）">小孩儿被猫抓伤需要打针吗（小孩被猫抓伤了要打疫苗吗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-5-node-share-links.htm" title="「11月5日」最高速度21M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月5日」最高速度21M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-29-node-share.htm" title="「10月29日」最高速度20.2M/S，2024年Clash Meta每天更新免费节点订阅链接">「10月29日」最高速度20.2M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-30222.htm" title="什么样的狗粮性价比高（什么狗粮好又价格便宜）">什么样的狗粮性价比高（什么狗粮好又价格便宜）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-31-free-high-speed-nodes.htm" title="「12月31日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「12月31日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-12-free-high-speed-nodes.htm" title="「12月12日」最高速度19.9M/S，2024年Clash Meta每天更新免费节点订阅链接">「12月12日」最高速度19.9M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-36029.htm" title="动物医院资质是什么地方审批的呢图片（动物医院资质是什么地方审批的呢图片）">动物医院资质是什么地方审批的呢图片（动物医院资质是什么地方审批的呢图片）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-23-free-high-speed-nodes.htm" title="「12月23日」最高速度18.4M/S，2024年Free Clash Meta每天更新免费节点订阅地址">「12月23日」最高速度18.4M/S，2024年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-9-node-share-links.htm" title="「1月9日」最高速度22.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月9日」最高速度22.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-23-free-node-subscribe.htm" title="「11月23日」最高速度21.7M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月23日」最高速度21.7M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-24-free-high-speed-nodes.htm" title="「11月24日」最高速度22.7M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月24日」最高速度22.7M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-33562.htm" title="适合新手男人开的店90后（适合男生新手行业）">适合新手男人开的店90后（适合男生新手行业）</a></li>
+                        <li class="py-2"><a href="/news/article-26011.htm" title="动物防疫指导方案（动物防疫服务承接方案）">动物防疫指导方案（动物防疫服务承接方案）</a></li>
+                        <li class="py-2"><a href="/news/article-20945.htm" title="动物疫苗多少钱打一次到哪打呢图片（动物疫苗多少钱打一次到哪打呢图片视频）">动物疫苗多少钱打一次到哪打呢图片（动物疫苗多少钱打一次到哪打呢图片视频）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-19-free-high-speed-nodes.htm" title="「10月19日」最高速度19.4M/S，2024年Clash Meta每天更新免费节点订阅链接">「10月19日」最高速度19.4M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-25-free-subscribe-node.htm" title="「12月25日」最高速度22.9M/S，2024年Free Clash Meta每天更新免费节点订阅地址">「12月25日」最高速度22.9M/S，2024年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-25096.htm" title="Android开发基础——Fragment">Android开发基础——Fragment</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-18-free-node-subscribe-links.htm" title="「1月18日」最高速度21.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月18日」最高速度21.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
                     </ul>
     </div>
 </div>
@@ -132,7 +150,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
