@@ -1,0 +1,313 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freeclashmeta.github.io/news/article-49775.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HDFS Quotas Guide（HDFS配额指南）</title>
+        <meta name="description" content="Name Quota示例  Space Quota示例 目录  			   HDFS Quotas Guide官网链接2.9.2版本HDFS Quotas Guide官网链接2.7.1版本 简介：Ha" />
+        <link rel="icon" href="/assets/website/img/freeclashmeta/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash Meta免费节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freeclashmeta.github.io/news/article-49775.htm" />
+    <meta property="og:site_name" content="Free Clash Meta免费节点分享站" />
+    <meta property="og:title" content="HDFS Quotas Guide（HDFS配额指南）" />
+    <meta property="og:image" content="https://freeclashmeta.github.io/uploads/20240729-1/9706536d3a65228c17cc4d1b50b24dda.webp" />
+        <meta property="og:release_date" content="2025-02-02T09:25:56" />
+    <meta property="og:updated_time" content="2025-02-02T09:25:56" />
+        <meta property="og:description" content="Name Quota示例  Space Quota示例 目录  			   HDFS Quotas Guide官网链接2.9.2版本HDFS Quotas Guide官网链接2.7.1版本 简介：Ha" />
+        
+    <!-- web fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- //web fonts -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freeclashmeta/style-starter.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="HDFS Quotas Guide（HDFS配额指南）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC0F2XP2Y3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XC0F2XP2Y3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="w3l-bootstrap-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+        <div class="container">
+                        <a class="navbar-brand" href="/">Free Clash Meta</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="#">关于</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">联系</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    <!-- index-block1 -->
+    <div class="w3l-index-block1 list">
+        <div class="content py-5">
+            <div class="container">
+                <div class="row py-md-5 py-3">
+                    <div class="col-md-5 content-left">
+                        <h1 class="pt-5">HDFS Quotas Guide（HDFS配额指南）</h1>
+                        <p class="mt-3 mb-md-5 mb-4">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                        </p>
+                    </div>
+                    <div class="col-md-7 content-photo mt-md-0 mt-5">
+                        <img src="/assets/website/img/freeclashmeta/main.jpg" class="img-fluid" alt="main image">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //index-block1 -->
+    <!-- content-with-photo17 -->
+    <section class="w3l-index-block3">
+        <div class="section-info py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				  			 <div id="log-box">  				<div id="catalog"><ul id="catalog-ul"> <li><i class="be be-arrowright"></i> <a href="#title-0" title="Name Quota示例">Name Quota示例</a></li> <li><i class="be be-arrowright"></i> <a href="#title-1" title="Space Quota示例">Space Quota示例</a></li> </ul><span class="log-zd"><span class="log-close"><a title="隐藏目录"><i class="be be-cross"></i><strong>目录</strong></a></span></span></div>  			</div> <div id="content_views" class="htmledit_views"> <article class="_2rhmJa" style="font-size: 16px;" rel="nofollow"> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://links.jianshu.com/go?to=http%3A%2F%2Fhadoop.apache.org%2Fdocs%2Fstable%2Fhadoop-project-dist%2Fhadoop-hdfs%2FHdfsQuotaAdminGuide.html"  target="_blank" rel="nofollow">HDFS Quotas Guide官网链接2.9.2版本</a><br /><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://links.jianshu.com/go?to=https%3A%2F%2Fhadoop.apache.org%2Fdocs%2Fr2.7.1%2Fhadoop-project-dist%2Fhadoop-hdfs%2FHdfsQuotaAdminGuide.html"  target="_blank" rel="nofollow">HDFS Quotas Guide官网链接2.7.1版本</a></p> <p>简介：Hadoop提供两种配额（quota）模式，name quota和space quota。name quota限制路径的文件（含文件夹）数目，space quota限制的”磁盘”占用空间。可以通过此功能实现团队的存储使用管理。</p> </h1> <ul> <li>Set the name quota to be N for each directory. Best effort for each directory, with faults reported if N is not a positive long integer, the directory does not exist or it is a file, or the directory would immediately exceed the new quota.<br /><code>$ hadoop dfsadmin -setQuota &lt;max_number&gt; &lt;directory&gt;</code> </li> <li>Remove any name quota for each directory. Best effort for each directory, with faults reported if the directory does not exist or it is a file. It is not a fault if the directory has no quota.<br /><code>$ hadoop dfsadmin -setSpaceQuota &lt;max_size&gt; &lt;directory&gt;</code> </li> <li>Remove any name quota for each directory. Best effort for each directory, with faults reported if the directory does not exist or it is a file. It is not a fault if the directory has no quota.<br /><code>$ hadoop dfsadmin -clrQuota &lt;directory&gt;</code> </li> <li>Remove any space quota for each directory. Best effort for each directory, with faults reported if the directory does not exist or it is a file. It is not a fault if the directory has no quota.<br /><code>$ hadoop dfsadmin -clrSpaceQuota &lt;directory&gt;</code> </li> </ul> <span class="directory"></span><h4 id="title-0">Name Quota示例</h4> <p>首先测试name quota，进行如下操作：</p> <ul> <li>准备hdfs路径，设置name quota，文件数量限制为5</li> </ul> <pre class="has"><code class="shell">$hdfs dfs -mkdir /name_quota $hdfs dfsadmin -setQuota 5 /name_quota</code></pre> <pre class="has"><code>$touch 1 $hdfs dfs -copyFromLocal 1 /name_quota/1 $hdfs dfs -copyFromLocal 1 /name_quota/2 $hdfs dfs -copyFromLocal 1 /name_quota/3 $hdfs dfs -copyFromLocal 1 /name_quota/4 $hdfs dfs -copyFromLocal 1 /name_quota/5 copyFromLocal: The NameSpace quota (directories and files) of directory /name_quota is exceeded: quota=5 file count=6</code></pre> <p>创建一个临时文件“1“，并将它复制到指定hdfs路径下，发现，当复制到第5个时失败，提示显示达到quota限制，说明quota生效，同时，我们设置quota_max_num为5，但只放了4个文件就满了，说明这个数字限制是包含文件夹的。<br /> 实际上是可以理解的，在HDFS中，无论文件和文件夹的基本抽象是一样的，占用基本同样的元数据信息，name quota实际上是元数据信息的配额。</p> <span class="directory"></span><h4 id="title-1">Space Quota示例</h4> <ul> <li>创建测试路径并设置space quota</li> </ul> <pre class="has"><code class="shell">$hdfs dfs -mkdir /space_quota $hdfs dfsadmin -setSpaceQUota 50m /space_quota</code></pre> <pre class="has"><code class="shell">$mkfile 10m 10m $hdfs dfs -copyFromLocal 10m /space_quota/10m_1</code></pre> <p>利用mkfile命令创建一个大小10m的文件（我用的是Mac，Linux系统使用dd命令创建指定大小文件），预期是在这个hdfs路径下可以存放5个10m的文件，第六个会超出，但实际情况是，第一个就失败了，报错如下：<br /><code>Caused by: org.apache.hadoop.ipc.RemoteException(org.apache.hadoop.hdfs.protocol.DSQuotaExceededException): The DiskSpace quota of /space_quota is exceeded: quota = 52428800 B = 50 MB but diskspace consumed = 134217728 B = 128 MB</code><br /> 看提示就理解，因为HDFS是以block为单位进行实际存储的，对于一个10m的文件，仍然会打成一个block存储，我的HDFS block size是128m，所以space quota配置50m，一个block也放不下，自然失败，因此进行一下改动，重新设置：</p> <pre class="has"><code class="shell">$hdfs dfsadmin -setSpaceQUota 1024m /space_quota $mkfile 128m 128m $ hdfs dfs -copyFromLocal 128m /space_quota/128m_1 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_2 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_3 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_4 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_5 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_6 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_7 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_8 $ hdfs dfs -copyFromLocal 128m /space_quota/128m_9</code></pre> <p>1024m的配额，可以放8个128m文件，在放第九个时，报错，核心信息如下：</p> <p><code>18/05/18 16:13:01 WARN hdfs.DFSClient: DataStreamer Exception org.apache.hadoop.hdfs.protocol.DSQuotaExceededException: The DiskSpace quota of /space_quota is exceeded: quota = 1073741824 B = 1 GB but diskspace consumed = 1207959552 B = 1.13 GB</code><br /> 符合预期，成功限制了规定路径下的存储空间配额。</p> <p>另外，经过测试（示例不详述），name quota和space quota可以同时作用于同一路径。</p> </article> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-49269.htm">合肥宠物领养中心官网电话 合肥宠物领养中心官网电话号码</a></p>
+                                        <p>下一个：<a href="/news/article-49776.htm">Spring Security认证_认证（成功和失败）后的处理方式</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-28345.htm" title="领养宠物协议书范本图片模板高清（领养宠物协议有法律效力吗）">领养宠物协议书范本图片模板高清（领养宠物协议有法律效力吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-17-free-node-subscribe-links.htm" title="「1月17日」最高速度22.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月17日」最高速度22.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-node-share.htm" title="「11月30日」最高速度19.6M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月30日」最高速度19.6M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-46795.htm" title="宠物粮食品牌前十名排行榜有哪些呢图片及价格（宠物粮生产厂家排名）">宠物粮食品牌前十名排行榜有哪些呢图片及价格（宠物粮生产厂家排名）</a></li>
+                        <li class="py-2"><a href="/news/article-42840.htm" title="RequestBody多个参数Map实现以及前端json传参方式">RequestBody多个参数Map实现以及前端json传参方式</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-14-free-node-subscribe-links.htm" title="「1月14日」最高速度19.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月14日」最高速度19.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-free-subscribe-node.htm" title="「11月15日」最高速度20.9M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月15日」最高速度20.9M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-free-high-speed-nodes.htm" title="「12月31日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「12月31日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-44325.htm" title="nmn哪个牌子的好(nmn哪个牌子好知乎)">nmn哪个牌子的好(nmn哪个牌子好知乎)</a></li>
+                        <li class="py-2"><a href="/news/article-49776.htm" title="Spring Security认证_认证（成功和失败）后的处理方式">Spring Security认证_认证（成功和失败）后的处理方式</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="w3l-market-footer">
+        <footer class="footer-28">
+            <div class="footer-bg-layer">
+                <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+                    <div class="container">
+                        <p class="copy-footer-28 text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            Free Clash Meta免费节点分享站 版权所有
+                            <br />
+                            Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            &#10548;
+        </button>
+        <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <!-- /move top -->
+    </section>
+    <!-- //footer-28 block -->
+    <!-- jQuery, Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashmeta/bootstrap.min.js"></script>
+    <!-- Template JavaScript -->
+    <script src="/assets/website/js/frontend/freeclashmeta/owl.carousel.js"></script>
+    <!-- script for owlcarousel -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                480: {
+                    items: 1,
+                    nav: false
+                },
+                667: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //script for owlcarousel -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery.magnific-popup.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+    </script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
