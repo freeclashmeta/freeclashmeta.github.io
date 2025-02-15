@@ -1,0 +1,307 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freeclashmeta.github.io/news/article-56776.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>写了个开源小中间件——运行时动态日志等级开关</title>
+        <meta name="description" content="项目地址，走过路过可以点个star ：）https://github.com/saigu/LogLevelSwitch   随着业务规模不断扩大，每一次线上故障的快速定位都是对开发同学的巨大挑战。 通" />
+        <link rel="icon" href="/assets/website/img/freeclashmeta/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash Meta免费节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freeclashmeta.github.io/news/article-56776.htm" />
+    <meta property="og:site_name" content="Free Clash Meta免费节点分享站" />
+    <meta property="og:title" content="写了个开源小中间件——运行时动态日志等级开关" />
+    <meta property="og:image" content="https://freeclashmeta.github.io/uploads/20240729-1/45375f36b54d9e70c00fd9ab54b6c8ea.webp" />
+        <meta property="og:release_date" content="2025-02-15T05:21:07" />
+    <meta property="og:updated_time" content="2025-02-15T05:21:07" />
+        <meta property="og:description" content="项目地址，走过路过可以点个star ：）https://github.com/saigu/LogLevelSwitch   随着业务规模不断扩大，每一次线上故障的快速定位都是对开发同学的巨大挑战。 通" />
+        
+    <!-- web fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- //web fonts -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freeclashmeta/style-starter.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="写了个开源小中间件——运行时动态日志等级开关">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC0F2XP2Y3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XC0F2XP2Y3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="w3l-bootstrap-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+        <div class="container">
+                        <a class="navbar-brand" href="/">Free Clash Meta</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    <!-- index-block1 -->
+    <div class="w3l-index-block1 list">
+        <div class="content py-5">
+            <div class="container">
+                <div class="row py-md-5 py-3">
+                    <div class="col-md-5 content-left">
+                        <h1 class="pt-5">写了个开源小中间件——运行时动态日志等级开关</h1>
+                        <p class="mt-3 mb-md-5 mb-4">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                        </p>
+                    </div>
+                    <div class="col-md-7 content-photo mt-md-0 mt-5">
+                        <img src="/assets/website/img/freeclashmeta/main.jpg" class="img-fluid" alt="main image">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //index-block1 -->
+    <!-- content-with-photo17 -->
+    <section class="w3l-index-block3">
+        <div class="section-info py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<blockquote class="pgc-blockquote-abstract"> <p data-track="1">项目地址，走过路过可以点个star ：）<br class="sysbr"/><br />https://github.com/saigu/LogLevelSwitch</p> </blockquote> </h1> <p data-track="3">随着业务规模不断扩大，每一次线上故障的快速定位都是对开发同学的巨大挑战。</p> <p data-track="4">通过日志进行业务关键逻辑的输出，是定位问题的有效手段之一。但是，过多的日志记录又会对系统造成额外的开销，极端情况下，甚至可能导致系统宕机。</p> <p data-track="5">因此，为了兼顾性能和故障场景下的快速定位，我们需要能够实时调整日志等级，以便输出更多的日志信息排查线上问题，或是减少日志打印带来的性能消耗。</p> <div class="pgc-img"></p> <p class="pgc-img-caption"> </div> <p data-track="6">基于以上背景，我们的LogLevelSwitch诞生了。</p> <blockquote> <p data-track="7">LogLevleSwitch以中间件的形式嵌入应用，基于配置中心的热更新能力，实现了应用运行时动态调整日志等级的能力。</p> </blockquote> </h1> <ul> <li data-track="9">兼容性：支持Log4j、Log4j2、Logback等。</li> <li data-track="10">扩展性：可以使用默认的基于本地配置文件的配置修改方式（仅供本地测试学习使用）。生产上，「强烈推荐」&nbsp;通过SPI接入你自己的配置中心，实现热更新。</li> <li data-track="11">易用性：接入简单，效果拔群，只要5分钟你就能用上。</li> </ul> </h1> <div class="pgc-img"><img decoding="async" src="https://p3.toutiaoimg.com/origin/tos-cn-i-qvj2lq49k0/d28defcc670840bd9654e326e258e46e?from=pc" alt="写了个开源小中间件——运行时动态日志等级开关" class="syl-page-img"/></p> <p class="pgc-img-caption"> </div> <p data-track="66">在应用Application中引入我们的LogLevelSwitch。</p> <p data-track="14">LogLevelSwitch包含两个核心组件，LogContext和SwitchContext。</p> <ul> <li data-track="15">SwitchContext: 保存从配置中心获取的switch开关状态与具体Logger配置信息。通过监听配置中心消息，实时更新switch内容，并实现对Logger等级的修改通知。</li> <li data-track="16">LogContext：保存应用原始的Logger与日志级别信息，并能够根据switch配置 更新 或 复原 Logger的等级。</li> </ul> </h1> <p data-track="18">话不多说了，快来尝尝鲜吧。</p> </h1> <p data-track="20">只用三步即可完成。</p> <ul> <li data-track="21">STEP 1: 应用中pom引入依赖</li> </ul> <pre class="syl-page-code hljs xml"><code><span class="hljs-tag">&lt;<span class="hljs-name">dependency&gt;<span class="hljs-tag">&lt;<span class="hljs-name">groupId&gt;io.github.saigu<span class="hljs-tag">&lt;/<span class="hljs-name">groupId&gt;<span class="hljs-tag">&lt;<span class="hljs-name">artifactId&gt;log-switch-core<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId&gt;<span class="hljs-tag">&lt;<span class="hljs-name">version&gt;1.0.0-beta<span class="hljs-tag">&lt;/<span class="hljs-name">version&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">dependency&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre> <ul> <li data-track="23">STEP 2: 构建config Bean</li> </ul> <pre class="syl-page-code hljs java"><code><span class="hljs-meta">@Configuration<span class="hljs-keyword">public<span class="hljs-class"><span class="hljs-keyword">class<span class="hljs-title">LogLevelSwitchConfig {<span class="hljs-meta">@Bean<span class="hljs-function">LogLevelSwitch<span class="hljs-title">logLevelSwitch<span class="hljs-params">() {<span class="hljs-keyword">return<span class="hljs-keyword">new LogLevelSwitch();     } }</span></span></span></span></span></span></span></span></span></span></span></code></pre> <ul> <li data-track="25">STEP 3: 接入配置中心</li> </ul> <p data-track="26">声明配置中心的SPI实现。</p> <blockquote class="pgc-blockquote-abstract"> <p data-track="27">在resource路径下新建 META-INF/services，创建文件名为<br />io.github.saigu.log.level.sw.listener.ConfigListener的文件，并写入需要的「实现类名」。</p> </blockquote> <p data-track="28">实现一：项目自带的LocalFile配置中心</p> <p data-track="29">如果你还没有自己的配置中心，那就使用我们自带的基于本地配置文件进行本地测试学习。</p> <p data-track="30">「实现类名」为<br />io.github.saigu.log.level.sw.listener.LocalFileListener</p> <blockquote class="pgc-blockquote-abstract"> <p data-track="31">注意，生产上 强烈推荐 通过「实现二」接入你自己的配置中心，实现热更新。</p> </blockquote> <p data-track="32">在resource目录下新建LocalSwitch.json文件：</p> <div class="pgc-img"><img decoding="async" src="https://p3.toutiaoimg.com/origin/tos-cn-i-qvj2lq49k0/622c60a6ac16442ea3fbb1c0b059145e?from=pc" alt="写了个开源小中间件——运行时动态日志等级开关" class="syl-page-img"/></p> <p class="pgc-img-caption"> </div> <p data-track="33">然后填写开关配置：</p> <pre class="syl-page-code hljs json"><code>{<span class="hljs-attr">"status":<span class="hljs-string">"on",<span class="hljs-attr">"loggerBeans": [     {<span class="hljs-attr">"name":<span class="hljs-string">"all",<span class="hljs-attr">"level":<span class="hljs-string">"error"     }   ] }</span></span></span></span></span></span></span></code></pre> <p data-track="35">实现二：自定义SPI扩展配置,接入自己的配置中心</p> <p data-track="36">如果你已经有了自己的配置中心，那就可以通过SPI扩展配置,接入自己的配置中心。</p> <p data-track="37">「实现类名」为你自己的实现类名。</p> <p class="syl-page-br" data-track="38"> </h1> <p data-track="41">两步接入。</p> <ul> <li data-track="42">STEP 1: 应用中pom引入依赖</li> </ul> <pre class="syl-page-code hljs xml"><code><span class="hljs-tag">&lt;<span class="hljs-name">dependency&gt;<span class="hljs-tag">&lt;<span class="hljs-name">groupId&gt;io.github.saigu<span class="hljs-tag">&lt;/<span class="hljs-name">groupId&gt;<span class="hljs-tag">&lt;<span class="hljs-name">artifactId&gt;log-switch-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId&gt;<span class="hljs-tag">&lt;<span class="hljs-name">version&gt;1.0.0-beta<span class="hljs-tag">&lt;/<span class="hljs-name">version&gt;<span class="hljs-tag">&lt;/<span class="hljs-name">dependency&gt;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre> <ul> <li data-track="44">STEP 2: 接入配置中心<br />同「方式一」</li> </ul> </h1> <p data-track="46">SwitchContext是我们的关键配置：</p> <div class="tableWrapper"> <div class="syl-shadow-provider"> <div class="syl-table-wrap"> <table> <colgroup> <col> <col> <col></colgroup> <tbody> <tr> <td> <p data-track="47">参数名</p> </td> <td> <p data-track="48">含义</p> </td> <td> <p data-track="49">可选值</p> </td> </tr> <tr> <td> <p class="syl-line-pure-english" data-track="50">status</p> </td> <td> <p data-track="51">开关状态</p> </td> <td> <p data-track="52">「off」: 关闭，使用应用 「on」:开启，使用配置中心的配置等级。</p> </td> </tr> <tr> <td> <p class="syl-line-pure-english" data-track="53">List&lt;LoggerBean&gt;</p> </td> <td> <p data-track="54">日志等级list</p> </td> <td> <p data-track="55">如果列表的第一个LoggerBean的name为all，则影响全局logger等级</p> </td> </tr> </tbody> </table> </div> </div> </div> <p data-track="56">参考范例：</p> <pre class="syl-page-code hljs json"><code>{<span class="hljs-attr">"status":<span class="hljs-string">"on",<span class="hljs-attr">"loggerBeans": [     {<span class="hljs-attr">"name":<span class="hljs-string">"all",<span class="hljs-attr">"level":<span class="hljs-string">"error"     }   ] }</span></span></span></span></span></span></span></code></pre> </h1> <p data-track="59">为了规范日志使用，同时避免影响降级开关效果，初始化的时候会去检测项目中依赖的日志框架实现。</p> <p data-track="60">请注意，如果日志提示</p> <blockquote> <p data-track="61">“存在多个日志框架实现，建议只保留一个，否则会影响日志降级开关效果”</p> </blockquote> <p data-track="62">说明检测到了应用中引入了多个日志框架实现。</p> <p data-track="63">建议从pom中进行移除多余日志框架，确保采用唯一日志框架实现。</p> </h1> <p data-track="65">本文还是专注于介绍吧，后面再讲讲实现吧，敬请期待。</p> <p data-track="65"> <blockquote><p>都看到最后了，原创不易，点个关注，点个赞吧～</p></blockquote> <blockquote><p>文章持续更新，可以微信搜索「阿丸笔记 」第一时间阅读，回复【笔记】获取Canal、MySQL、HBase、JAVA实战笔记，回复【资料】获取一线大厂面试资料。</p></blockquote> <blockquote><p>知识碎片重新梳理，构建Java知识图谱：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/saigu/JavaKnowledgeGraph"  rel="nofollow">github.com/saigu/JavaK…</a>（历史文章查阅非常方便）</p></blockquote> <p data-track="65"> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-56219.htm">淮北宠物救助中心电话（淮北宠物领养中心在哪）</a></p>
+                                        <p>下一个：<a href="/news/article-56777.htm">一片片枫叶像什么的比喻句1年级（一片片枫叶像什么写句子）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-52932.htm" title="[DEBUG] QAT Nginx for docker 部署时&#8221;&#8211;with-ld-opt&#8221;出错">[DEBUG] QAT Nginx for docker 部署时&#8221;&#8211;with-ld-opt&#8221;出错</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-node-share.htm" title="「11月30日」最高速度19.6M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月30日」最高速度19.6M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-42332.htm" title="天津狗狗领养中心 天津狗狗领养中心地址">天津狗狗领养中心 天津狗狗领养中心地址</a></li>
+                        <li class="py-2"><a href="/news/article-39864.htm" title="梦见自己抱着别的女人睡觉好不好（梦到抱着别的女人）">梦见自己抱着别的女人睡觉好不好（梦到抱着别的女人）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-free-node-subscribe.htm" title="「12月2日」最高速度20.8M/S，2024年Clash Meta每天更新免费节点订阅链接">「12月2日」最高速度20.8M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-node-share-links.htm" title="「2月13日」最高速度19.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「2月13日」最高速度19.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-20490.htm" title="动物防疫计划的主要内容包括（动物防疫计划的主要内容包括）">动物防疫计划的主要内容包括（动物防疫计划的主要内容包括）</a></li>
+                        <li class="py-2"><a href="/news/article-32607.htm" title="北京美联众合宠物医院怎么样（美联众合动物医院望京西路）">北京美联众合宠物医院怎么样（美联众合动物医院望京西路）</a></li>
+                        <li class="py-2"><a href="/news/article-23251.htm" title="湖州领养猫咪（湖州领养猫咪地址）">湖州领养猫咪（湖州领养猫咪地址）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-29-node-share.htm" title="「1月29日」最高速度19.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月29日」最高速度19.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="w3l-market-footer">
+        <footer class="footer-28">
+            <div class="footer-bg-layer">
+                <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+                    <div class="container">
+                        <p class="copy-footer-28 text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            Free Clash Meta免费节点分享站 版权所有
+                            <br />
+                            Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            &#10548;
+        </button>
+        <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <!-- /move top -->
+    </section>
+    <!-- //footer-28 block -->
+    <!-- jQuery, Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashmeta/bootstrap.min.js"></script>
+    <!-- Template JavaScript -->
+    <script src="/assets/website/js/frontend/freeclashmeta/owl.carousel.js"></script>
+    <!-- script for owlcarousel -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                480: {
+                    items: 1,
+                    nav: false
+                },
+                667: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //script for owlcarousel -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery.magnific-popup.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+    </script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
