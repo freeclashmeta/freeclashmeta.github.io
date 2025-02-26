@@ -1,0 +1,307 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freeclashmeta.github.io/news/article-62573.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>通过winsw将SpringBoot可运行jar包做成后台服务，启动运行</title>
+        <meta name="description" content="一，背景 因为网络限制，目前开发的一个SpringBoot项目不能部署到Linux设备上，必须要部署到Windows上。在Linux设备上后台启动SpringBoot项目只需要一条命令：nohup s" />
+        <link rel="icon" href="/assets/website/img/freeclashmeta/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash Meta免费节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freeclashmeta.github.io/news/article-62573.htm" />
+    <meta property="og:site_name" content="Free Clash Meta免费节点分享站" />
+    <meta property="og:title" content="通过winsw将SpringBoot可运行jar包做成后台服务，启动运行" />
+    <meta property="og:image" content="https://freeclashmeta.github.io/uploads/20240729-1/2b9ea2277a7a17904d56d467530ed730.webp" />
+        <meta property="og:release_date" content="2025-02-25T04:58:38" />
+    <meta property="og:updated_time" content="2025-02-25T04:58:38" />
+        <meta property="og:description" content="一，背景 因为网络限制，目前开发的一个SpringBoot项目不能部署到Linux设备上，必须要部署到Windows上。在Linux设备上后台启动SpringBoot项目只需要一条命令：nohup s" />
+        
+    <!-- web fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- //web fonts -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freeclashmeta/style-starter.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="通过winsw将SpringBoot可运行jar包做成后台服务，启动运行">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC0F2XP2Y3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XC0F2XP2Y3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="w3l-bootstrap-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+        <div class="container">
+                        <a class="navbar-brand" href="/">Free Clash Meta</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    <!-- index-block1 -->
+    <div class="w3l-index-block1 list">
+        <div class="content py-5">
+            <div class="container">
+                <div class="row py-md-5 py-3">
+                    <div class="col-md-5 content-left">
+                        <h1 class="pt-5">通过winsw将SpringBoot可运行jar包做成后台服务，启动运行</h1>
+                        <p class="mt-3 mb-md-5 mb-4">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                        </p>
+                    </div>
+                    <div class="col-md-7 content-photo mt-md-0 mt-5">
+                        <img src="/assets/website/img/freeclashmeta/main.jpg" class="img-fluid" alt="main image">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //index-block1 -->
+    <!-- content-with-photo17 -->
+    <section class="w3l-index-block3">
+        <div class="section-info py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h2>一，背景</h2> <p>因为网络限制，目前开发的一个SpringBoot项目不能部署到Linux设备上，必须要部署到Windows上。在Linux设备上后台启动SpringBoot项目只需要一条命令：<strong>nohup sh run.sh &amp;，</strong>run.sh脚本包含了启动SpringBoot项目的命令。在windows上后台启动SpringBoot项目貌似就比较尴尬，没有那么好用的命令来后台启动项目，打成war包放到Tomcat等web容器中就浪费了SpringBoot内嵌web容器的优势。在网络上搜肠刮肚一番，最终选择了<strong>winsw(</strong><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/kohsuke/winsw/releases"  rel="nofollow">https://github.com/kohsuke/winsw/releases</a><strong>)</strong>，winsw是一个可以将任何应用程序注册成服务的软件。嗯，就是她了，哈哈哈。</p> <h2>二，步骤</h2> <p>a，去上面给出的链接里下载自己所需的文件，选择了最新版本的winsw。主要需要下载两个文件，一个是sample-minimal.xml和WinSW.NET4.exe(WinSW.NET2.exe也行)。</p> <p><img fetchpriority="high" decoding="async" alt="" class="has" height="347" src="http://img.555519.xyz/uploads/20230112/e37d1fbe2d3c802d05dedfe9a3bce853.jpg"></p> <p>a.+，下载winsw后，在window上安装 .net framework4&nbsp;，否则后面会出问题。（很重要）</p> <p>b，SpringBoot项目通过执行<strong>mvn clean package</strong>命令后得到可执行jar包：statement-0.0.1-SNAPSHOT.jar。</p> <p>c，将sample-minimal.xml和WinSW.NET4.exe改为statement-0.0.1-SNAPSHOT.xml和statement-0.0.1-SNAPSHOT.exe，文件名保持一致，方便后续操作。（<strong>jar包、.exe文件、.xml文件均在同一目录下</strong>）</p> <p>d，在statement-0.0.1-SNAPSHOT.xml文件中&lt;configuration&gt;标签内进行相关配置，如下。</p> <pre class="has"><code>&lt;configuration&gt;      &lt;!-- ID of the service. It should be unique accross the Windows system--&gt;   &lt;!--服务ID：启动、关闭、删除服务时，都是通过ID来操作的--&gt;   &lt;id&gt;statement-0.0.1-SNAPSHOT&lt;/id&gt;   &lt;!-- Display name of the service --&gt;   &lt;!--服务名称--&gt;   &lt;name&gt;statement-0.0.1-SNAPSHOT (powered by WinSW)&lt;/name&gt;   &lt;!-- Service description --&gt;   &lt;!--服务描述--&gt;   &lt;description&gt;This service is a service for Statement Project（http://www.eachtravel.com/）&lt;/description&gt;      &lt;!-- Path to the executable, which should be started --&gt;   &lt;!--当前电脑配置了java环境变量，直接写成“java”就行；你也可以写成类似这样：D:\develop\jdk1.8\jre\bin\java--&gt;   &lt;executable&gt;java&lt;/executable&gt;      &lt;!--启动参数--&gt;   &lt;arguments&gt;-jar statement-0.0.1-SNAPSHOT.jar&lt;/arguments&gt;   &lt;!--&lt;arguments&gt;-jar "C:\Users\Administrator\Desktop\winsw\statement-0.0.1-SNAPSHOT.jar"&lt;/arguments&gt;--&gt;   &lt;!--日志配置--&gt;   &lt;logmode&gt;rotate&lt;/logmode&gt;      &lt;/configuration&gt;</code></pre> <p>e，到此就完成了配置，可以安装并启动服务了</p> <p>e1，进入到三个文件的目标目录（比如target）,执行命令：statement-0.0.1-SNAPSHOT.exe install，安装服务。</p> <p>e2，安装服务成功后，通过命令：net start&nbsp;statement-0.0.1-SNAPSHOT(服务ID)启动服务。</p> <p><img decoding="async" alt="" class="has" height="237" src="http://img.555519.xyz/uploads/20230112/e14c0db9dc39be1ffbb27cc3eead4bd2.jpg"></p> <p>当然，也可以通过在开始那里输入：services.msc命令直接进入服务界面，通过服务ID找到服务，然后手动启动。</p> <p>&nbsp;<img decoding="async" alt="" class="has" height="343" src="http://img.555519.xyz/uploads/20230112/85504482b18c3bdf8de0cf38bc80f0f3.jpg"></p> <p>e3，通过命令：net stop statement-0.0.1-SNAPSHOT&nbsp;停止服务，或者是直接去服务界面手动停止服务。</p> <p>e4，停止服务后，可通过：sc delete ServiceName删除服务</p> <p><img loading="lazy" decoding="async" alt="" class="has" height="59" src="http://img.555519.xyz/uploads/20230112/54a107df87ff21919d3501a24f2fa4bf.jpg"></p> <p>e4,查找windows service的PID：SC queryex service_name</p> <p><img loading="lazy" decoding="async" alt="" class="has" height="179" src="http://img.555519.xyz/uploads/20230112/c82b75d22eaae4c6dd2352d1fb4ecb32.jpg"></p> <h2>三，总结&nbsp;</h2> <p>虽然不难，但还是捣鼓了好久，哈哈，记录下来，留个纪念！</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-61976.htm">青岛市动物疫病防治中心宁夏路电话（青岛动物疫病预防控制中心电话）</a></p>
+                                        <p>下一个：<a href="/news/article-62574.htm">关于Android10 暗黑模式的简述</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-23704.htm" title="动物诊所英语怎么写（动物医院英语短语）">动物诊所英语怎么写（动物医院英语短语）</a></li>
+                        <li class="py-2"><a href="/news/article-60796.htm" title="东北农大兽医专业（东北农业大学兽医专业）">东北农大兽医专业（东北农业大学兽医专业）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-node-share.htm" title="「11月18日」最高速度20M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月18日」最高速度20M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20490.htm" title="动物防疫计划的主要内容包括（动物防疫计划的主要内容包括）">动物防疫计划的主要内容包括（动物防疫计划的主要内容包括）</a></li>
+                        <li class="py-2"><a href="/news/article-25096.htm" title="Android开发基础——Fragment">Android开发基础——Fragment</a></li>
+                        <li class="py-2"><a href="/news/article-21399.htm" title="狗狗领养平台公众号有哪些（狗狗领养网站）">狗狗领养平台公众号有哪些（狗狗领养网站）</a></li>
+                        <li class="py-2"><a href="/news/article-45824.htm" title="动物疫苗是什么单位性质（动物疫苗属于疫苗分类吗）">动物疫苗是什么单位性质（动物疫苗属于疫苗分类吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-27-free-node-subscribe.htm" title="「12月27日」最高速度22.2M/S，2024年Free Clash Meta每天更新免费节点订阅地址">「12月27日」最高速度22.2M/S，2024年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-3-free-node-subscribe-links.htm" title="「2月3日」最高速度18.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「2月3日」最高速度18.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-30223.htm" title="猫猫打三针多少钱（猫咪打三针多少钱）">猫猫打三针多少钱（猫咪打三针多少钱）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="w3l-market-footer">
+        <footer class="footer-28">
+            <div class="footer-bg-layer">
+                <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+                    <div class="container">
+                        <p class="copy-footer-28 text-center">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            Free Clash Meta免费节点分享站 版权所有
+                            <br />
+                            Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            &#10548;
+        </button>
+        <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <!-- /move top -->
+    </section>
+    <!-- //footer-28 block -->
+    <!-- jQuery, Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashmeta/bootstrap.min.js"></script>
+    <!-- Template JavaScript -->
+    <script src="/assets/website/js/frontend/freeclashmeta/owl.carousel.js"></script>
+    <!-- script for owlcarousel -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                480: {
+                    items: 1,
+                    nav: false
+                },
+                667: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //script for owlcarousel -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery.magnific-popup.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+    </script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
