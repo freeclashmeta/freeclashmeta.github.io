@@ -76,15 +76,12 @@
                         <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
                     </li>
                                         <li class="nav-item">
-                        <a class="nav-link" href="/news/">新闻资讯</a>
+                        <a class="nav-link" href="/client.htm">客户端</a>
                     </li>
                                         <li class="nav-item">
-                        <a class="nav-link" href="#">关于</a>
+                        <a class="nav-link" href="/news/">新闻资讯</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">联系</a>
-                    </li>
-                </ul>
+                                    </ul>
             </div>
         </div>
     </nav>
@@ -118,7 +115,6 @@
                                         <input type="hidden" id="share-website-info" data-name="" data-url="">
                   				  				  				<div id="content_views" class="htmledit_views"> <div style="font-size:16px;"> <p>我们公司用的云之家作为企业内容的IM通讯工具，那么就经常会涉及通过云之家进行消息推送，这个就有点类似微信了。那么我在推送图文消息的时候，云之家需要我把图片转Base64的格式传过去。</p> <div class="pgc-img"><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/f62e5a6f8960ca9e832f9cfab64ef377.jpg" alt="avframe转byte数组_Spring Boot图片文件转Base64"></div> <p>最开始我傻傻的用在线工具把图片转成Base64然后复制到程序里，当然这肯定是不好的，但是为了测试，就这样做了，然后占了70%的代码行数。正式的话，我们肯定是要借助代码来实现。那么我们需要先获取项目目录下的文件</p> <pre class="has"><code>File file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "static/warnning.png");</code></pre> <p>然后借助sun.misc.BASE64Decoder把文件转Base64</p> <pre class="has"><code>public static String file2Base64(File file) {        InputStream in = null;        byte[] data = null;        // 读取文件字节数组        try {            in = new FileInputStream(file);            data = new byte[in.available()];            in.read(data);            in.close();        } catch (IOException e) {            e.printStackTrace();        } finally {            try {                in.close();            } catch (IOException e) {                e.printStackTrace();            }        }        // 对字节数组Base64编码        BASE64Encoder encoder = new BASE64Encoder();        // 返回 Base64 编码过的字节数组字符串        return encoder.encode(data);    }</code></pre> <p>在本地一切都没有问题，但是通过jenkins发布到K8S的时候老是出现找不到包的问题，我也就没去深究，后来就用Hutool,这里我引入了Hutool工具包</p> <pre class="has"><code>cn.hutool            hutool-core            5.4.3</code></pre> <p>Hutool的Base64.encode在core这个包里面，所以只需要引入hutool-core即可。 引用非常简单</p> <pre class="has"><code>File file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "static/warnning.png");String picBase64= cn.hutool.core.codec.Base64.encode(file);</code></pre> <p>但是事情似乎也并没有那么顺利，在本地运行没有问题，项目也是在K8S上运行起来了，但是获取不到文件</p> <pre class="has"><code>java.io.FileNotFoundException: class path resource [static/warnning.png] cannot be resolved to absolute file path because it does not reside in the file system: jar:file:/home/app.jar!/BOOT-INF/classes!/static/warnning.png</code></pre> <div class="pgc-img"><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/ce941acc1877e13a563274fa92aecfaa.jpg" alt="avframe转byte数组_Spring Boot图片文件转Base64"></div> <p>因为打包之后是jar文件，ResourceUtils.getFile无法访问jar中的目录，所以后来采用获取文件流的方式</p> <pre class="has"><code> ClassPathResource resource = new ClassPathResource("static/warnning.png"); String picBase64= cn.hutool.core.codec.Base64.encode(resource.getInputStream());</code></pre> <p>Hutool这个工具包确实不错，提供很多丰富的工具类，我用得比较多是就是StringUtil和DateUtil等，确实非常方便，大家有兴趣的可以去了解一下</p> <div class="pgc-img"><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/143e0c272286aa5be3ed36c2e2ab2980.jpg" alt="avframe转byte数组_Spring Boot图片文件转Base64"></div> <p>现在各种工具类库以及Spring Boot的Starter，它们封装了许多实用的组件和工具类，为我们的开发提高了效率，这样有利有弊，当然，如果仅仅是为了解决工作中的问题，我可以借助更多简便的类库来完成，但是，我需要去了解其背后的原理和实现机制，不然，我们的能力仅仅停留在使用层面，这对我们来说是非常不利的。我们要知其然，更要知其所以然，开源的类库众多，我们需要花心思去学习它的源代码、学习大神们编程思想。</p> </div> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-35017.htm">广东预制菜十大品牌</a></p>
                                         <p>下一个：<a href="/news/article-35522.htm">动物防疫站打疫苗需要什么手续和证件（动物防疫站在哪）</a></p>
                                     </div>
                                     </div>
@@ -129,16 +125,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-11-11-free-node-subscribe-links.htm" title="「11月11日」最高速度18.8M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月11日」最高速度18.8M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-46309.htm" title="免费领养宠物犬（免费领养宠物犬犯法吗）">免费领养宠物犬（免费领养宠物犬犯法吗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-1-node-share.htm" title="「2月1日」最高速度22M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「2月1日」最高速度22M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-1-10-node-share-links.htm" title="「1月10日」最高速度20.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月10日」最高速度20.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-10-node-share-links.htm" title="「11月10日」最高速度20.9M/S，2024年Clash Meta每天更新免费节点订阅链接">「11月10日」最高速度20.9M/S，2024年Clash Meta每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-20945.htm" title="动物疫苗多少钱打一次到哪打呢图片（动物疫苗多少钱打一次到哪打呢图片视频）">动物疫苗多少钱打一次到哪打呢图片（动物疫苗多少钱打一次到哪打呢图片视频）</a></li>
-                        <li class="py-2"><a href="/news/article-18704.htm" title="动物疫苗生产厂家有哪些 动物疫苗生产厂家有哪些公司">动物疫苗生产厂家有哪些 动物疫苗生产厂家有哪些公司</a></li>
-                        <li class="py-2"><a href="/news/article-34522.htm" title="猫咪打疫苗一共打几针疫苗（猫咪打疫苗一共打几针疫苗好）">猫咪打疫苗一共打几针疫苗（猫咪打疫苗一共打几针疫苗好）</a></li>
-                        <li class="py-2"><a href="/news/article-30222.htm" title="什么样的狗粮性价比高（什么狗粮好又价格便宜）">什么样的狗粮性价比高（什么狗粮好又价格便宜）</a></li>
-                        <li class="py-2"><a href="/news/article-29275.htm" title="长沙学美容的地方（长沙学美容学费大概多少钱?）">长沙学美容的地方（长沙学美容学费大概多少钱?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-31-node-share-links.htm" title="「1月31日」最高速度22.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月31日」最高速度22.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-37387.htm" title="宠物美容师真实现状（宠物美容师真实现状）">宠物美容师真实现状（宠物美容师真实现状）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-free-high-speed-nodes.htm" title="「2月21日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「2月21日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-48787.htm" title="发布nuget包的正确姿势&#8212;cicd自动打包发布nuget包">发布nuget包的正确姿势&#8212;cicd自动打包发布nuget包</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-7-node-share.htm" title="「2月7日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「2月7日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-29-node-share.htm" title="「1月29日」最高速度19.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「1月29日」最高速度19.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-64391.htm" title="上海宠物领养站电话地址（上海宠物领养站电话地址是多少）">上海宠物领养站电话地址（上海宠物领养站电话地址是多少）</a></li>
+                        <li class="py-2"><a href="/news/article-54561.htm" title="济南宠物领养中心有哪些公司 济南宠物领养中心有哪些公司招聘">济南宠物领养中心有哪些公司 济南宠物领养中心有哪些公司招聘</a></li>
+                        <li class="py-2"><a href="/news/article-60796.htm" title="东北农大兽医专业（东北农业大学兽医专业）">东北农大兽医专业（东北农业大学兽医专业）</a></li>
+                        <li class="py-2"><a href="/news/article-53460.htm" title="宠物粮在哪个网站买比较好一点呢（宠物粮在哪个网站买比较好一点呢视频）">宠物粮在哪个网站买比较好一点呢（宠物粮在哪个网站买比较好一点呢视频）</a></li>
                     </ul>
     </div>
 </div>
@@ -150,16 +146,13 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                     </ul>
     </div>
