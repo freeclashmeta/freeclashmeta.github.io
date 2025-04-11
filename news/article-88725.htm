@@ -1,0 +1,303 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freeclashmeta.github.io/news/article-88725.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>使用feign客户端要使用注解@EnableFeignClients</title>
+        <meta name="description" content="概述 在Spring cloud应用中，当我们要使用feign客户端时，一般要做以下三件事情 : 1使用注解@EnableFeignClients启用feign客户端； 示例 : @SpringBoo" />
+        <link rel="icon" href="/assets/website/img/freeclashmeta/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash Meta免费节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freeclashmeta.github.io/news/article-88725.htm" />
+    <meta property="og:site_name" content="Free Clash Meta免费节点分享站" />
+    <meta property="og:title" content="使用feign客户端要使用注解@EnableFeignClients" />
+    <meta property="og:image" content="https://freeclashmeta.github.io/uploads/20240729-1/9706536d3a65228c17cc4d1b50b24dda.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:16:38" />
+    <meta property="og:updated_time" content="2025-04-05T08:16:38" />
+        <meta property="og:description" content="概述 在Spring cloud应用中，当我们要使用feign客户端时，一般要做以下三件事情 : 1使用注解@EnableFeignClients启用feign客户端； 示例 : @SpringBoo" />
+        
+    <!-- web fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- //web fonts -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freeclashmeta/style-starter.css">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="使用feign客户端要使用注解@EnableFeignClients">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC0F2XP2Y3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XC0F2XP2Y3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="w3l-bootstrap-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+        <div class="container">
+                        <a class="navbar-brand" href="/">Free Clash Meta</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    <!-- index-block1 -->
+    <div class="w3l-index-block1 list">
+        <div class="content py-5">
+            <div class="container">
+                <div class="row py-md-5 py-3">
+                    <div class="col-md-5 content-left">
+                        <h1 class="pt-5">使用feign客户端要使用注解@EnableFeignClients</h1>
+                        <p class="mt-3 mb-md-5 mb-4">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                        </p>
+                    </div>
+                    <div class="col-md-7 content-photo mt-md-0 mt-5">
+                        <img src="/assets/website/img/freeclashmeta/main.jpg" class="img-fluid" alt="main image">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //index-block1 -->
+    <!-- content-with-photo17 -->
+    <section class="w3l-index-block3">
+        <div class="section-info py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>概述<br /> 在Spring cloud应用中，当我们要使用feign客户端时，一般要做以下三件事情 :</p> <p>1使用注解@EnableFeignClients启用feign客户端；<br /> 示例 :</p> <p>@SpringBootApplication<br /> @EnableFeignClients<br /> public class TestApplication {<!-- --><br /> &nbsp; &nbsp; public static void main(String[] args) {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp; SpringApplication.run(TestApplication.class, args);<br /> &nbsp; &nbsp; }<br /> }</p> <p> 2使用注解@FeignClient 定义feign客户端 ;<br /> 示例 : 该例子定义了一个feign客户端，将远程服务http://test-service/test/echo映射为一个本地Java方法调用。</p> <p>@FeignClient(name = "test-service", path = "/test")<br /> public interface TestService {<!-- --><br /> &nbsp; &nbsp; @RequestMapping(value = "/echo", method = RequestMethod.GET)<br /> &nbsp; &nbsp; TestModel echo(@RequestParam("parameter") String parameter);<br /> }</p> <p> 3使用注解@Autowired使用上面所定义feign的客户端 ；</p> <p>&nbsp; &nbsp; @Autowired<br /> &nbsp; &nbsp; TestService testService;</p> <p>&nbsp; &nbsp; public void run()<br /> &nbsp; &nbsp; {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp; // 这里的使用本地Java API的方式调用远程的Restful接口<br /> &nbsp; &nbsp; &nbsp; &nbsp; TestModel dto = testService.echo("Hello,你好!");<br /> &nbsp; &nbsp; &nbsp; &nbsp; log.info("echo : {}", dto);<br /> &nbsp; &nbsp; &nbsp;}</p> <p> 上面的三个步骤，前两个步骤可以理解为定义feign客户端,第三步是使用所定义的feign客户端。通过调试发现，上面第三步所注入的testService是一个代理对象，如下所示 :</p> <p>testService = {$Proxy66@5502}<br /> &nbsp;&nbsp; &nbsp;"HardCodedTarget(type=TestService, name=test-service, url=http://test-service/test)"<br /> &nbsp;h = {ReflectiveFeign$FeignInvocationHandler@6924}<br /> &nbsp; target = {Target$HardCodedTarget@6930}<br /> &nbsp; dispatch = {LinkedHashMap@6931} &nbsp;size = 1<br /> &nbsp; &nbsp;0 = {LinkedHashMap$Entry@6948}<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;"public abstract xxx.model.TestModel xxx.service.TestService.echo(java.lang.String)"</p> <p> 该对象会代理客户端完成远程服务方法的调用，那么，该代理对象是如何生成的 ？这篇文章，我们通过源代码分析来回答这些问题。</p> <p>源代码解析<br /> 源代码版本 : spring-cloud-openfeign-core-2.1.0.RELEASE , Spring Cloud Greenwich.RELEASE</p> <p>注解@EnableFeignClients:扫描和注册feign客户端bean定义<br /> 注解@EnableFeignClients告诉框架扫描所有使用注解@FeignClient定义的feign客户端。它又通过注解@Import导入了类FeignClientsRegistrar( feign客户端注册器),如下所示:</p> <p>@EnableFeignClients<br /> &nbsp;&nbsp; &nbsp;=&gt; @Import(FeignClientsRegistrar.class)</p> <p> 那么 FeignClientsRegistrar 又是做什么的呢 ？我们继续。</p> <p>FeignClientsRegistrar : feign客户端注册器<br /> FeignClientsRegistrar实现了接口 ImportBeanDefinitionRegistrar。而ImportBeanDefinitionRegistrar的设计目的，就是被某个实现类实现，配合使用@Configuration注解的使用者配置类，在配置类被处理时，用于额外注册一部分bean定义:</p> <p>对于上面的例子，使用者配置类就是 TestApplication</p> <p>public interface ImportBeanDefinitionRegistrar {<!-- --></p> <p>&nbsp; &nbsp;/**<br /> &nbsp; &nbsp; * Register bean definitions as necessary based on the given annotation metadata of<br /> &nbsp; &nbsp; * the importing @Configuration class.<br /> &nbsp; &nbsp; * 根据使用者配置类的注解元数据注册bean定义<br /> &nbsp; &nbsp; * @param importingClassMetadata 使用者配置类的注解元数据<br /> &nbsp; &nbsp; * @param registry 当前bean定义注册表，一般指当前Spring应用上下文对象，当前Spring容器<br /> &nbsp; &nbsp; */<br /> &nbsp; &nbsp;public void registerBeanDefinitions(<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry);</p> <p>}</p> <p> #registerBeanDefinitions – 注册feign客户端配置和feign客户端<br /> 方法FeignClientsRegistrar#registerBeanDefinitions实现如下:</p> <p>&nbsp; &nbsp;@Override<br /> &nbsp; &nbsp;public void registerBeanDefinitions(AnnotationMetadata metadata,BeanDefinitionRegistry registry) {<!-- --><br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 注册缺省配置到容器 registry<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;registerDefaultConfiguration(metadata, registry);<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 注册所发现的各个 feign 客户端到到容器 registry<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;registerFeignClients(metadata, registry);<br /> &nbsp; &nbsp;}</p> <p> #registerDefaultConfiguration– 注册feign客户端缺省配置<br /> &nbsp;&nbsp; &nbsp;// 注册feign客户端的缺省配置，缺省配置信息来自注解元数据的属性 defaultConfiguration<br /> &nbsp; &nbsp; private void registerDefaultConfiguration(AnnotationMetadata metadata,BeanDefinitionRegistry registry) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 获取注解@EnableFeignClients的注解属性<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Map&lt;String, Object&gt; defaultAttrs = metadata<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.getAnnotationAttributes(EnableFeignClients.class.getName(), true);</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (defaultAttrs != null &amp;&amp; defaultAttrs.containsKey("defaultConfiguration")) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String name;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 下面是对所注册的缺省配置的的命名，格式如下 :<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// default.xxx.TestApplication<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (metadata.hasEnclosingClass()) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// &nbsp;针对注解元数据metadata对应一个内部类或者方法返回的方法本地类的情形<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;name = "default." + metadata.getEnclosingClassName();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else {<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// name 举例 : default.xxx.TestApplication<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 这里 xxx.TestApplication 是注解@EnableFeignClients所在配置类的长名称<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;name = "default." + metadata.getClassName();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 各种信息准备就绪，现在执行注册<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;registerClientConfiguration(registry, name,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;defaultAttrs.get("defaultConfiguration"));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;}</p> <p> #registerDefaultConfiguration方法最终注册客户端缺省配置的动作交给方法#registerClientConfiguration执行。</p> <p>#registerClientConfiguration – 注册feign客户端配置<br /> &nbsp; &nbsp; // 将指定feign客户端配置configuration作为一个bean定义注册到容器：<br /> &nbsp; &nbsp; // bean 定义对象类型 : GenericBeanDefinition<br /> &nbsp; &nbsp; // bean class : FeignClientSpecification<br /> &nbsp; &nbsp; // bean name : default.xxx.TestApplication.FeignClientSpecification (缺省配置)<br /> &nbsp; &nbsp; // bean name : test-service.FeignClientSpecification (针对某个feign client 的配置)<br /> &nbsp;&nbsp; &nbsp;private void registerClientConfiguration(BeanDefinitionRegistry registry, Object name,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Object configuration) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BeanDefinitionBuilder builder = BeanDefinitionBuilder<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.genericBeanDefinition(FeignClientSpecification.class);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 设置构造函数参数<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;builder.addConstructorArgValue(name);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;builder.addConstructorArgValue(configuration);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 从bean定义构建器构造bean定义并注册到容器<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;registry.registerBeanDefinition(<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;name + "." + FeignClientSpecification.class.getSimpleName(),<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;builder.getBeanDefinition());<br /> &nbsp;&nbsp; &nbsp;}</p> <p> #registerClientConfiguration方法用于注册一个feign客户端配置bean,可以用于注册针对所有feign客户端的缺省配置的注册，也可以用于针对每个feign客户端的专有配置的注册。</p> <p>针对所有feign客户端的缺省配置的bean名称类似于 : default.xxx.TestApplication.FeignClientSpecification，<br /> 针对某个名称为test-service的feign客户端的配置的bean名称类似于:test-service.FeignClientSpecification。</p> <p>#registerFeignClients – 注册各个feign客户端及其配置<br /> &nbsp;&nbsp; &nbsp;// 参数 metadata : 注解@EnableFeignClients所在配置类的注解元数据<br /> &nbsp;&nbsp; &nbsp;public void registerFeignClients(AnnotationMetadata metadata,BeanDefinitionRegistry registry) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 定义一个基于classpath的组件扫描器，它会根据指定的扫描位置和@EnableFeignClients注解属性<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 找出开发人员定义的所有feign客户端，也就是那些使用了注解@FeignClient的所有接口定义<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;ClassPathScanningCandidateComponentProvider scanner = getScanner();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;scanner.setResourceLoader(this.resourceLoader);</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Set&lt;String&gt; basePackages;</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// attrs 用于表示注解@EnableFeignClients所在配置类的注解元数据中注解@EnableFeignClients<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 的部分<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Map&lt;String, Object&gt; attrs = metadata<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.getAnnotationAttributes(EnableFeignClients.class.getName());<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;AnnotationTypeFilter annotationTypeFilter = new AnnotationTypeFilter(<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;FeignClient.class);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;final Class&lt;?&gt;[] clients = attrs == null ? null<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;: (Class&lt;?&gt;[]) attrs.get("clients");<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (clients == null || clients.length == 0) {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// @EnableFeignClients 中没有指定 clients 属性的情况<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;scanner.addIncludeFilter(annotationTypeFilter);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;basePackages = getBasePackages(metadata);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// @EnableFeignClients 中指定了 clients 属性的情况<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;final Set&lt;String&gt; clientClasses = new HashSet&lt;&gt;();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;basePackages = new HashSet&lt;&gt;();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (Class&lt;?&gt; clazz : clients) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;basePackages.add(ClassUtils.getPackageName(clazz));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;clientClasses.add(clazz.getCanonicalName());<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;AbstractClassTestingTypeFilter filter = new AbstractClassTestingTypeFilter() {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;@Override<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;protected boolean match(ClassMetadata metadata) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String cleaned = metadata.getClassName().replaceAll("\\$", ".");<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return clientClasses.contains(cleaned);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;};<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;scanner.addIncludeFilter(<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;new AllTypeFilter(Arrays.asList(filter, annotationTypeFilter)));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 使用 scanner 扫描每一个 basePackage, 获取其中的 feign 客户端定义，<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 也就是 @FeignClient 定义的那些接口<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (String basePackage : basePackages) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Set&lt;BeanDefinition&gt; candidateComponents = scanner<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.findCandidateComponents(basePackage);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (BeanDefinition candidateComponent : candidateComponents) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (candidateComponent instanceof AnnotatedBeanDefinition) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// verify annotated class is an interface<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;AnnotatedBeanDefinition beanDefinition = (AnnotatedBeanDefinition) candidateComponent;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;AnnotationMetadata annotationMetadata = beanDefinition.getMetadata();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Assert.isTrue(annotationMetadata.isInterface(),<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;"@FeignClient can only be specified on an interface");</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 获取所定义的feign客户端接口上的注解@FeignClient属性<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Map&lt;String, Object&gt; attributes = annotationMetadata<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.getAnnotationAttributes(<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;FeignClient.class.getCanonicalName());</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String name = getClientName(attributes);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 将所定义的feign客户端上的配置属性作为一个bean注册到容器<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 此方法的逻辑我们上面已经分析过<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;registerClientConfiguration(registry, name,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;attributes.get("configuration"));</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 将所定义的feign客户端作为一个bean注册到容器：<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// bean 定义类型 : GenericBeanDefinition<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// &nbsp;bean class : FeignClientFactoryBean<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// &nbsp;autowire 模式 : 根据类型绑定<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// @FeignClient注解中的url,path,fallback等属性会设置为bean定义的属性<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;registerFeignClient(registry, annotationMetadata, attributes);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;}</p> <p>&nbsp;&nbsp; &nbsp;// 辅助工具类，从@EnableFeignClients注解属性中获取basePackages属性:<br /> &nbsp;&nbsp; &nbsp;// 参考以下@EnableFeignClients注解属性 :<br /> &nbsp;&nbsp; &nbsp;// 1. value<br /> &nbsp;&nbsp; &nbsp;// 2. basePackages<br /> &nbsp;&nbsp; &nbsp;// 3. basePackageClasses<br /> &nbsp;&nbsp; &nbsp;// 4. 配置类所在的包<br /> &nbsp;&nbsp; &nbsp;// 参数 importingClassMetadata : 使用注解@EnableFeignClients的配置类的元数据<br /> &nbsp;&nbsp; &nbsp;protected Set&lt;String&gt; getBasePackages(AnnotationMetadata importingClassMetadata) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 注解@EnableFeignClients的属性<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Map&lt;String, Object&gt; attributes = importingClassMetadata<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.getAnnotationAttributes(EnableFeignClients.class.getCanonicalName());</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Set&lt;String&gt; basePackages = new HashSet&lt;&gt;();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (String pkg : (String[]) attributes.get("value")) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (StringUtils.hasText(pkg)) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;basePackages.add(pkg);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (String pkg : (String[]) attributes.get("basePackages")) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (StringUtils.hasText(pkg)) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;basePackages.add(pkg);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;for (Class&lt;?&gt; clazz : (Class[]) attributes.get("basePackageClasses")) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;basePackages.add(ClassUtils.getPackageName(clazz));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (basePackages.isEmpty()) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;basePackages.add(<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;ClassUtils.getPackageName(importingClassMetadata.getClassName()));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return basePackages;<br /> &nbsp;&nbsp; &nbsp;}</p> <p> #registerFeignClients 最终注册feign客户端配置的动作交给#registerClientConfiguration完成，而注册feign客户端的动作交给#registerFeignClient方法完成。</p> <p>#registerFeignClient – 注册一个feign客户端<br /> &nbsp;&nbsp; &nbsp;// 将所定义的feign客户端作为一个bean注册到容器：<br /> &nbsp;&nbsp; &nbsp;// bean 定义类型 : GenericBeanDefinition<br /> &nbsp;&nbsp; &nbsp;// &nbsp;bean class : FeignClientFactoryBean -- 这是一个工厂bean，而不是最终bean实例的class<br /> &nbsp;&nbsp; &nbsp;// &nbsp;autowire 模式 : 根据类型绑定<br /> &nbsp;&nbsp; &nbsp;// @FeignClient注解中的url,path,fallback等属性会设置为bean定义的属性<br /> &nbsp;&nbsp; &nbsp;// 参数 registry : Spring 容器<br /> &nbsp;&nbsp; &nbsp;// 参数 annotationMetadata : @FeignClient所注解的接口上的注解元数据<br /> &nbsp;&nbsp; &nbsp;// 参数 attributes : @FeignClient 注解属性信息<br /> &nbsp;&nbsp; &nbsp;private void registerFeignClient(BeanDefinitionRegistry registry,<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;AnnotationMetadata annotationMetadata, Map&lt;String, Object&gt; attributes) {<!-- --><br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String className = annotationMetadata.getClassName();<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BeanDefinitionBuilder definition = BeanDefinitionBuilder<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.genericBeanDefinition(FeignClientFactoryBean.class);<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;validate(attributes);<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.addPropertyValue("url", getUrl(attributes));<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.addPropertyValue("path", getPath(attributes));<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String name = getName(attributes);<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.addPropertyValue("name", name);<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.addPropertyValue("type", className);<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.addPropertyValue("decode404", attributes.get("decode404"));<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.addPropertyValue("fallback", attributes.get("fallback"));<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.addPropertyValue("fallbackFactory", attributes.get("fallbackFactory"));<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;definition.setAutowireMode(AbstractBeanDefinition.AUTOWIRE_BY_TYPE);</p> <p>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String alias = name + "FeignClient";<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;AbstractBeanDefinition beanDefinition = definition.getBeanDefinition();</p> <p>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;boolean primary = (Boolean)attributes.get("primary"); // has a default, won't be null</p> <p>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;beanDefinition.setPrimary(primary);</p> <p>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String qualifier = getQualifier(attributes);<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (StringUtils.hasText(qualifier)) {<!-- --><br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;alias = qualifier;<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p> <p>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BeanDefinitionHolder holder = new BeanDefinitionHolder(beanDefinition, className,<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;new String[] { alias });<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BeanDefinitionReaderUtils.registerBeanDefinition(holder, registry);<br /> &nbsp; &nbsp;}</p> <p> 从上面的代码分析可知，FeignClientsRegistrar的主要作用如下 :</p> <p>注册缺省feign客户端配置bean定义；<br /> 对于每个@FeignClient注解的feign客户端定义 :<br /> 注册一个针对该feign客户端的配置bean定义；<br /> 注册该feign客户端bean定义,指定生成bean实例采用工厂类FeignClientFactoryBean;<br /> 而且，上述功能实现在类方法FeignClientsRegistrar#registerBeanDefinitions中，这是接口ImportBeanDefinitionRegistrar所定义的方法。该方法会在@EnableFeignClients注解被处理时执行。具体的执行时调用栈如下所示：</p> <p>&nbsp; &nbsp; AbstractApplicationContext#invokeBeanFactoryPostProcessors<br /> &nbsp; &nbsp; =&gt; PostProcessorRegistrationDelegate#invokeBeanFactoryPostProcessors<br /> &nbsp; &nbsp; =&gt; foreach BeanDefinitionRegistryPostProcessor : #postProcessBeanDefinitionRegistry<br /> &nbsp; &nbsp; =&gt; ConfigurationClassPostProcessor#postProcessBeanDefinitionRegistry<br /> &nbsp; &nbsp; =&gt; #processConfigBeanDefinitions<br /> &nbsp; &nbsp; =&gt; ConfigurationClassBeanDefinitionReader#loadBeanDefinitions<br /> &nbsp; &nbsp; =&gt; foreach ConfigurationClass : #loadBeanDefinitionsForConfigurationClass<br /> &nbsp; &nbsp; =&gt; #loadBeanDefinitionsFromRegistrars<br /> &nbsp; &nbsp; =&gt; foreach ImportBeanDefinitionRegistrar : #registerBeanDefinitions<br /> &nbsp; &nbsp; =&gt; FeignClientsRegistrar#registerBeanDefinitions</p> <p> FeignClientFactoryBean生成feign客户端代理对象<br /> 基于上面的分析，我们可以得知，开发人员所定义的feign客户端和相关配置会以bean定义的形式注册到bean容器中，这样当使用@Autowired注入一个feign客户端时，容器会使用工厂类FeignClientFactoryBean为其生成一个实例。下面我们来看其具体工作过程。</p> <p>FeignClientFactoryBean#getObject生成feign客户端代理对象<br /> &nbsp; &nbsp; // 该方法由接口FactoryBean约定<br /> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;@Override<br /> &nbsp;&nbsp; &nbsp;public Object getObject() throws Exception {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return getTarget();<br /> &nbsp;&nbsp; &nbsp;}</p> <p> &nbsp;&nbsp; &nbsp;&lt;T&gt; T getTarget() {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp; // &nbsp;从应用上下文中获取创建 feign 客户端的上下文对象 FeignContext<br /> &nbsp; &nbsp; &nbsp; &nbsp; // FeignContext 针对每个feign客户端定义会生成一个不同的 AnnotationConfigApplicationContext，<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 这些应用上下文的parent都设置为当前应用的主应用上下文<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 参考 : FeignAutoConfiguration<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;FeignContext context = applicationContext.getBean(FeignContext.class);<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 为目标feign客户端对象构建一个 builder,该builder最终生成的目标feign客户端是一个<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 动态代理，使用 InvocationHandler ： ReflectiveFeign$FeignInvocationHandler<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Feign.Builder builder = feign(context);</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (!StringUtils.hasText(this.url)) {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// @FeignClient 属性 url 属性没有指定的情况<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 根据属性 name , path 拼装一个 url，<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 这种通常是需要在多个服务节点之间进行负载均衡的情况<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (!this.name.startsWith("http")) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;url = "http://" + this.name;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;else {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;url = this.name;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 方法cleanPath()加工属性path，使其以/开头，不以/结尾<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;url += cleanPath();<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 这里形成的url格式类似 : &nbsp;http://test-service/test<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 其中 test-service 是服务名，不是服务所在节点的IP，主机名或者域名</p> <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 函数 loadBalance 做如下动作 :<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 1. 将builder和一个LoadBalancerFeignClient bean实例关联起来<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 2. 使用一个HystrixTargeter将builder和一个 HardCodedTarget bean实例关联起来<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 这里 HardCodedTarget 表示对应 url 为 http://test-service/test 的远程服务(可能<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 包含多个服务方法)<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 3. 生成最终的feign client 实例 : ReflectiveFeign$FeignInvocationHandler 的动态代理对象，<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 使用 InvocationHandler ： ReflectiveFeign$FeignInvocationHandler。<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// 每个远程服务方法会对应到一个@FeignClient注解的接口方法上(依据方法上的注解进行匹配)<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return (T) loadBalance(builder, context, new HardCodedTarget&lt;&gt;(this.type,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;this.name, url));<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p> <p> &nbsp; &nbsp; &nbsp; &nbsp; // @FeignClient 属性 url 属性被指定的情况<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 这种通常是明确指出了服务节点的url的情况，实际上不需要负载均衡<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (StringUtils.hasText(this.url) &amp;&amp; !this.url.startsWith("http")) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;this.url = "http://" + this.url;<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;String url = this.url + cleanPath();<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 将builder和一个LoadBalancerFeignClient bean实例关联起来<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Client client = getOptional(context, Client.class);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (client != null) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (client instanceof LoadBalancerFeignClient) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// not load balancing because we have a url,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// but ribbon is on the classpath, so unwrap<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 因为指定了明确的服务节点url，所以这里不需要负载均衡，<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 所以这里尽管client是LoadBalancerFeignClient，所以<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 实际上可以获取其所代理的对象作为最终的client，<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 相当于去掉了LoadBalancerFeignClient这层的代理功能<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;client = ((LoadBalancerFeignClient)client).getDelegate();<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;builder.client(client);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 使用一个HystrixTargeter将builder和一个 HardCodedTarget bean实例关联起来<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Targeter targeter = get(context, Targeter.class);<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 生成最终的feign client 实例 : ReflectiveFeign$FeignInvocationHandler 的动态代理对象，<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 使用 InvocationHandler ： ReflectiveFeign$FeignInvocationHandler。<br /> &nbsp; &nbsp; &nbsp; &nbsp; // 每个远程服务方法会对应到 一个@FeignClient注解的接口方法上(依据方法上的注解进行匹配)<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return (T) targeter.target(this, builder, context, new HardCodedTarget&lt;&gt;(<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;this.type, this.name, url));<br /> &nbsp;&nbsp; &nbsp;}</p> <p> 方法FeignClientFactoryBean#feign – 创建feign客户端构建器<br /> protected Feign.Builder feign(FeignContext context) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;FeignLoggerFactory loggerFactory = get(context, FeignLoggerFactory.class);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Logger logger = loggerFactory.create(this.type);</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 从上下文获取一个 Feign.Builder 上,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 并从上下文获得 Encoder, Decoder, Contract 设置到该 builder 上<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Feign.Builder builder = get(context, Feign.Builder.class)<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// required values<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.logger(logger)<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.encoder(get(context, Encoder.class))<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.decoder(get(context, Decoder.class))<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;.contract(get(context, Contract.class));</p> <p> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 对 builder 进行其他属性设置<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;configureFeign(context, builder);</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return builder;<br /> &nbsp;&nbsp; &nbsp;}</p> <p> 方法FeignClientFactoryBean#loadBalance – 生成具备负载均衡能力的feign客户端<br /> 为feign客户端构建器绑定负载均衡客户端,绑定目标服务端点，并生成最终的feign客户端实例。</p> <p>// 对builder设置负载均衡客户端，绑定到目标服务端点，构建最终的feign客户端对象<br /> protected &lt;T&gt; T loadBalance(Feign.Builder builder, FeignContext context,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;HardCodedTarget&lt;T&gt; target) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 从上下文context获取一个Client，缺省是 LoadBalancerFeignClient<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Client client = getOptional(context, Client.class);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (client != null) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 将client设置到builder上<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;builder.client(client);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 从上下文中获取一个 targeter,缺省是一个 HystrixTargeter<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Targeter targeter = get(context, Targeter.class);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 上面获取得到的 targeter 会根据 builder 的类型决定如何将 target<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;// 绑定到 builder 并设置有关的其他属性和功能,然后生成最终的feign客户端对象<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return targeter.target(this, builder, context, target);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p> <p>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;throw new IllegalStateException(<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;"No Feign Client for loadBalancing defined. Did you forget to include " +<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;"spring-cloud-starter-netflix-ribbon?");<br /> &nbsp;&nbsp; &nbsp;}</p> <p> 从上面分析可以看出，缺省情况下，所使用的feign客户端构建器类为Feign.Builder,并且Targeter是一个HystrixTargeter。HystrixTargeter#target方法的参数builder为Feign.Builder时，会直接调用该builder的target方法,如下所示 ：</p> <p>class HystrixTargeter implements Targeter {<!-- --><br /> @Override<br /> &nbsp;&nbsp; &nbsp;public &lt;T&gt; T target(FeignClientFactoryBean factory, Feign.Builder feign, FeignContext context,<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Target.HardCodedTarget&lt;T&gt; target) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if (!(feign instanceof feign.hystrix.HystrixFeign.Builder)) {<!-- --><br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;return feign.target(target);<br /> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}<br /> &nbsp; &nbsp; &nbsp; &nbsp;// ... 省略其他代码<br /> &nbsp;&nbsp; &nbsp;}<br /> }</p> <p> 接下来再来看Feign.Builder#target是如何工作的:</p> <p>&nbsp; // 执行构建并且创建相应的feign客户端实例<br /> &nbsp; public &lt;T&gt; T target(Target&lt;T&gt; target) {<!-- --><br /> &nbsp; &nbsp; &nbsp; return build().newInstance(target);<br /> &nbsp; &nbsp; }</p> <p> &nbsp; // 构建过程，最终根据各种配置生成一个 ReflectiveFeign 对象<br /> &nbsp; public Feign build() {<!-- --><br /> &nbsp; &nbsp; &nbsp; SynchronousMethodHandler.Factory synchronousMethodHandlerFactory =<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; new SynchronousMethodHandler.Factory(client, retryer, requestInterceptors, logger,<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; logLevel, decode404, closeAfterDecode, propagationPolicy);<br /> &nbsp; &nbsp; &nbsp; ParseHandlersByName handlersByName =<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; new ParseHandlersByName(contract, options, encoder, decoder, queryMapEncoder,<br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; errorDecoder, synchronousMethodHandlerFactory);<br /> &nbsp; &nbsp; &nbsp; return new ReflectiveFeign(handlersByName, invocationHandlerFactory, queryMapEncoder);<br /> &nbsp; &nbsp; }<br /> &nbsp; }</p> <p> 然后再看ReflectiveFeign#newInstance方法:</p> <p>&nbsp; // 创建最终的feign客户端实例 : 一个 ReflectiveFeign$FeignInvocationHandler 的动态代理对象<br /> &nbsp; @Override<br /> &nbsp; public &lt;T&gt; T newInstance(Target&lt;T&gt; target) {<!-- --><br /> &nbsp; &nbsp; Map&lt;String, MethodHandler&gt; nameToHandler = targetToHandlersByName.apply(target);<br /> &nbsp; &nbsp; Map&lt;Method, MethodHandler&gt; methodToHandler = new LinkedHashMap&lt;Method, MethodHandler&gt;();<br /> &nbsp; &nbsp; List&lt;DefaultMethodHandler&gt; defaultMethodHandlers = new LinkedList&lt;DefaultMethodHandler&gt;();</p> <p>&nbsp; &nbsp; for (Method method : target.type().getMethods()) {<!-- --><br /> &nbsp; &nbsp; &nbsp; if (method.getDeclaringClass() == Object.class) {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp; continue;<br /> &nbsp; &nbsp; &nbsp; } else if (Util.isDefault(method)) {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;// 对于每个缺省方法，使用 DefaultMethodHandler<br /> &nbsp; &nbsp; &nbsp; &nbsp; DefaultMethodHandler handler = new DefaultMethodHandler(method);<br /> &nbsp; &nbsp; &nbsp; &nbsp; defaultMethodHandlers.add(handler);<br /> &nbsp; &nbsp; &nbsp; &nbsp; methodToHandler.put(method, handler);<br /> &nbsp; &nbsp; &nbsp; } else {<!-- --><br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;// 对于每个对应服务功能端点的方法，缺省使用nameToHandler获取的MethodHandler，缺省是<br /> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;// SynchronousMethodHandler<br /> &nbsp; &nbsp; &nbsp; &nbsp; methodToHandler.put(method, nameToHandler.get(Feign.configKey(target.type(), method)));<br /> &nbsp; &nbsp; &nbsp; }<br /> &nbsp; &nbsp; }<br /> &nbsp; &nbsp; // 创建feign客户端实例 ReflectiveFeign$FeignInvocationHandler,<br /> &nbsp; &nbsp; // 该对象包含了上面所创建的methodToHandler，用于对应各个开发者定义的@FeignClient接口方法<br /> &nbsp; &nbsp; InvocationHandler handler = factory.create(target, methodToHandler);<br /> &nbsp; &nbsp; // 创建feign客户端实例的动态代理对象<br /> &nbsp; &nbsp; T proxy = (T) Proxy.newProxyInstance(target.type().getClassLoader(),<br /> &nbsp; &nbsp; &nbsp; &nbsp; new Class&lt;?&gt;[] {target.type()}, handler);</p> <p>&nbsp;&nbsp; &nbsp;// 将缺省方法处理器绑定到feign客户端实例的动态代理对象上<br /> &nbsp; &nbsp; for (DefaultMethodHandler defaultMethodHandler : defaultMethodHandlers) {<!-- --><br /> &nbsp; &nbsp; &nbsp; defaultMethodHandler.bindTo(proxy);<br /> &nbsp; &nbsp; }<br /> &nbsp; &nbsp; return proxy;<br /> &nbsp; }<br /> 从上面的分析我们不难看出，为什么最终注入的testService最终是一个ReflectiveFeign$FeignInvocationHandler动态代理实例了。</p> <p>总结<br /> 从上面的分析可以看出，当我们使用注解@EnableFeignClients 时，相当于启用了feign客户端定义的扫描和注册机制，从而可以发现开发人员通过注解@FeignClient定义的feign客户端，并最终作为bean定义注册到容器中。而通过@Autowired自动装配注解，这些feign客户端会以ReflectiveFeign$FeignInvocationHandler动态代理的形式被注入到使用方。该feign客户端包含了对每个接口方法的处理器MethodHandler,接口缺省方法对应DefaultMethodHandler,服务功能端点方法对应SynchronousMethodHandler。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88006.htm">附近免费领养狗狗的地方在哪里呀最近（哪有领养狗狗的地方）</a></p>
+                                        <p>下一个：<a href="/news/article-88726.htm">买狗去哪个平台好（买狗去哪个app）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-89452.htm" title="十大进口猫粮排行2018（十大进口猫粮排行2018年）">十大进口猫粮排行2018（十大进口猫粮排行2018年）</a></li>
+                        <li class="py-2"><a href="/news/article-68785.htm" title="动物医院急救电话是多少号（动物医院有急诊吗）">动物医院急救电话是多少号（动物医院有急诊吗）</a></li>
+                        <li class="py-2"><a href="/news/article-67511.htm" title="开宠物粮工厂需要办什么手续和证件呢（宠物粮加工厂加盟）">开宠物粮工厂需要办什么手续和证件呢（宠物粮加工厂加盟）</a></li>
+                        <li class="py-2"><a href="/news/article-70090.htm" title="小型颗粒饲料机多少钱一台?（小型颗粒饲料机器多少钱一台）">小型颗粒饲料机多少钱一台?（小型颗粒饲料机器多少钱一台）</a></li>
+                        <li class="py-2"><a href="/news/article-87267.htm" title="猫咪打疫苗为了预防什么（猫打疫苗为了什么?）">猫咪打疫苗为了预防什么（猫打疫苗为了什么?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-6-free-high-speed-nodes.htm" title="「4月6日」最高速度22.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「4月6日」最高速度22.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-node-subscribe.htm" title="「3月25日」最高速度21.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「3月25日」最高速度21.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-82987.htm" title="开宠物店不好的地方怎么办（刚开的宠物店生意不好怎么办）">开宠物店不好的地方怎么办（刚开的宠物店生意不好怎么办）</a></li>
+                        <li class="py-2"><a href="/news/article-73377.htm" title="动物防疫疫苗种类有哪些品种 动物防疫疫苗种类有哪些品种图片">动物防疫疫苗种类有哪些品种 动物防疫疫苗种类有哪些品种图片</a></li>
+                        <li class="py-2"><a href="/news/article-77436.htm" title="宠物粮食行业发展前景分析论文题目大全（宠物粮行业环境分析）">宠物粮食行业发展前景分析论文题目大全（宠物粮行业环境分析）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="w3l-market-footer">
+        <footer class="footer-28">
+            <div class="footer-bg-layer">
+                <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+                    <div class="container">
+                        <p class="copy-footer-28 text-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            Free Clash Meta免费节点分享站 版权所有
+                            <br />
+                            Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            &#10548;
+        </button>
+        <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <!-- /move top -->
+    </section>
+    <!-- //footer-28 block -->
+    <!-- jQuery, Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashmeta/bootstrap.min.js"></script>
+    <!-- Template JavaScript -->
+    <script src="/assets/website/js/frontend/freeclashmeta/owl.carousel.js"></script>
+    <!-- script for owlcarousel -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                480: {
+                    items: 1,
+                    nav: false
+                },
+                667: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //script for owlcarousel -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery.magnific-popup.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+    </script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
