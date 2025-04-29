@@ -1,4 +1,4 @@
-# 「4月29日」最高速度19.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址  更新时间 2025-04-29 08:28:36
+# 「4月29日」最高速度21.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址  更新时间 2025-04-29 16:15:07
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freeclashmeta.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
