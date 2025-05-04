@@ -1,0 +1,306 @@
+<!doctype html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freeclashmeta.github.io/news/article-108600.htm" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Django实现excel导入导出</title>
+        <meta name="description" content="想必大家都困扰于大批量配置的繁琐和沉重的工作量，这个时候采用文件导入导出的方式能较大程度缓解配置带给系统使用人员的精神压力。基于这个目的，本文将详细介绍基于Django如何实现excel文件的导入导出" />
+        <link rel="icon" href="/assets/website/img/freeclashmeta/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Clash Meta免费节点分享站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freeclashmeta.github.io/news/article-108600.htm" />
+    <meta property="og:site_name" content="Free Clash Meta免费节点分享站" />
+    <meta property="og:title" content="Django实现excel导入导出" />
+    <meta property="og:image" content="https://freeclashmeta.github.io/uploads/20240729-1/f25d23f0cabb15177878e0380ecd005f.webp" />
+        <meta property="og:release_date" content="2025-05-01T09:02:26" />
+    <meta property="og:updated_time" content="2025-05-01T09:02:26" />
+        <meta property="og:description" content="想必大家都困扰于大批量配置的繁琐和沉重的工作量，这个时候采用文件导入导出的方式能较大程度缓解配置带给系统使用人员的精神压力。基于这个目的，本文将详细介绍基于Django如何实现excel文件的导入导出" />
+        
+    <!-- web fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- //web fonts -->
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freeclashmeta/style-starter.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Django实现excel导入导出">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC0F2XP2Y3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XC0F2XP2Y3');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="w3l-bootstrap-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+        <div class="container">
+                        <a class="navbar-brand" href="/">Free Clash Meta</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/">首页</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/free-nodes/">免费节点</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/client.htm">客户端</a>
+                    </li>
+                                        <li class="nav-item">
+                        <a class="nav-link" href="/news/">新闻资讯</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+    <!-- index-block1 -->
+    <div class="w3l-index-block1 list">
+        <div class="content py-5">
+            <div class="container">
+                <div class="row py-md-5 py-3">
+                    <div class="col-md-5 content-left">
+                        <h1 class="pt-5">Django实现excel导入导出</h1>
+                        <p class="mt-3 mb-md-5 mb-4">
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                        </p>
+                    </div>
+                    <div class="col-md-7 content-photo mt-md-0 mt-5">
+                        <img src="/assets/website/img/freeclashmeta/main.jpg" class="img-fluid" alt="main image">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //index-block1 -->
+    <!-- content-with-photo17 -->
+    <section class="w3l-index-block3">
+        <div class="section-info py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>想必大家都困扰于大批量配置的繁琐和沉重的工作量，这个时候采用文件导入导出的方式能较大程度缓解配置带给系统使用人员的精神压力。基于这个目的，本文将详细介绍基于Django如何实现excel文件的导入导出。<br /> 工欲善其事，必先利其器。首先需要安装依赖的模块包如下：</p> <ul> <li>XlsxWriter</li> <li>xlrd</li> <li>openpyxl</li> <li>pytz</li> </ul> <p>上述功能包下载地址：https://pypi.org/<br /> 接下来重头戏。</p> <h2> <a id="modelspy_10" rel="nofollow"></a>models.py-定义表模型</h2> <pre><code class="prism language-python"><span class="token keyword">class</span> <span class="token class-name">Host_List</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token builtin">id</span> <span class="token operator">=</span> models<span class="token punctuation">.</span>AutoField     host_ip <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span>unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>     host_name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">16</span><span class="token punctuation">,</span>null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>     create_time <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span>auto_now_add<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> </code></pre> <h2> <a id="urlspy_21" rel="nofollow"></a>urls.py-定义接口入口</h2> <pre><code class="prism language-python"><span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> files  urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>     url<span class="token punctuation">(</span><span class="token string">r'^upload/'</span><span class="token punctuation">,</span>files<span class="token punctuation">.</span>upload<span class="token punctuation">)</span><span class="token punctuation">,</span>     url<span class="token punctuation">(</span><span class="token string">r'^download/'</span><span class="token punctuation">,</span>files<span class="token punctuation">.</span>download<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">]</span> </code></pre> <h2> <a id="filespy_32" rel="nofollow"></a>files.py-编写上传下载实现逻辑</h2> <pre><code class="prism language-python"><span class="token keyword">import</span> datetime <span class="token keyword">import</span> pytz <span class="token keyword">import</span> json <span class="token keyword">import</span> operator <span class="token keyword">from</span> django<span class="token punctuation">.</span>core <span class="token keyword">import</span> serializers <span class="token keyword">import</span> os <span class="token keyword">import</span> xlrd <span class="token keyword">import</span> time <span class="token keyword">import</span> openpyxl <span class="token keyword">import</span> xlsxwriter <span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse<span class="token punctuation">,</span>StreamingHttpResponse  <span class="token keyword">def</span> <span class="token function">download_template</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>     date_p <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>date<span class="token punctuation">(</span><span class="token punctuation">)</span>     str_p <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>date_p<span class="token punctuation">)</span>       fp <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'/etc/files/static/download/'</span><span class="token operator">+</span>filename<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>     response <span class="token operator">=</span> StreamingHttpResponse<span class="token punctuation">(</span>fp<span class="token punctuation">)</span>     <span class="token comment"># response = FileResponse(fp)</span>     response<span class="token punctuation">[</span><span class="token string">'Content-Type'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'application/octet-stream'</span>     filename<span class="token operator">=</span>filename<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span>     filename<span class="token operator">=</span>filename<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'_'</span><span class="token operator">+</span>str_p<span class="token operator">+</span><span class="token string">'.xlsx'</span>     response<span class="token punctuation">[</span><span class="token string">'Content-Disposition'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'attachment;filename="%s"'</span> <span class="token operator">%</span> filename     <span class="token keyword">return</span> response     fp<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>      <span class="token keyword">def</span> <span class="token function">upload</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>     response<span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>     status<span class="token operator">=</span><span class="token string">'success'</span>     <span class="token keyword">if</span> request<span class="token punctuation">.</span>method <span class="token operator">==</span> <span class="token string">'POST'</span><span class="token punctuation">:</span>         file_obj <span class="token operator">=</span> request<span class="token punctuation">.</span>FILES<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'file'</span><span class="token punctuation">)</span>         current_time<span class="token operator">=</span><span class="token builtin">str</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>         f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token string">'/etc/files'</span><span class="token punctuation">,</span> <span class="token string">'static'</span><span class="token punctuation">,</span> <span class="token string">'pic'</span><span class="token punctuation">,</span> current_time<span class="token operator">+</span>file_obj<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span>         <span class="token keyword">print</span><span class="token punctuation">(</span>file_obj<span class="token punctuation">,</span><span class="token builtin">type</span><span class="token punctuation">(</span>file_obj<span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token keyword">for</span> chunk <span class="token keyword">in</span> file_obj<span class="token punctuation">.</span>chunks<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>             f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>chunk<span class="token punctuation">)</span> <span class="token comment">##数据流写入服务端本机excel文件中</span>         f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>         book <span class="token operator">=</span> xlrd<span class="token punctuation">.</span>open_workbook<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token string">'/etc/files'</span><span class="token punctuation">,</span> <span class="token string">'static'</span><span class="token punctuation">,</span> <span class="token string">'pic'</span><span class="token punctuation">,</span> current_time<span class="token operator">+</span>file_obj<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">##打开服务端excel文件</span>         sheet1 <span class="token operator">=</span> book<span class="token punctuation">.</span>sheets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>                 result<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>sheet1<span class="token punctuation">.</span>nrows<span class="token punctuation">)</span><span class="token punctuation">:</span>             tmp<span class="token operator">=</span><span class="token punctuation">[</span>sheet1<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">,</span>sheet1<span class="token punctuation">.</span>cell<span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">]</span>             result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>tmp<span class="token punctuation">)</span>         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">##判断excel中是否有重复IP</span>             <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>             	<span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">==</span>result<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                   response<span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>                   response<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'dumplicate'</span>                   response<span class="token punctuation">[</span><span class="token string">'host_ip'</span><span class="token punctuation">]</span><span class="token operator">=</span>result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>                   json_data <span class="token operator">=</span> json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>response<span class="token punctuation">)</span>                   <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>json_data<span class="token punctuation">)</span>         host_list<span class="token operator">=</span>Host_List<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#判断excel中IP信息是否已存在数据库中</span>             <span class="token keyword">for</span> var <span class="token keyword">in</span> host_list<span class="token punctuation">:</span>                 <span class="token keyword">if</span> result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">==</span>var<span class="token punctuation">.</span>host_ip<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                     response<span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>                     response<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'exists'</span>                     response<span class="token punctuation">[</span><span class="token string">'host_ip'</span><span class="token punctuation">]</span><span class="token operator">=</span>result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>                     json_data <span class="token operator">=</span> json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>response<span class="token punctuation">)</span>                     <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>json_data<span class="token punctuation">)</span>                            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment">##excel中数据写入数据库                     </span>             hostlistadd<span class="token operator">=</span>Host_List<span class="token punctuation">(</span>host_ip<span class="token operator">=</span>result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>host_name<span class="token operator">=</span>result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>create_time<span class="token operator">=</span>datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>             hostlistadd<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>               <span class="token keyword">if</span> hostlistadd<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">:</span>                 response<span class="token operator">=</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span>                 response<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">'success'</span>                                       json_data <span class="token operator">=</span> json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>response<span class="token punctuation">)</span>                 <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>json_data<span class="token punctuation">)</span>                      <span class="token keyword">def</span> <span class="token function">hostsdownload</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>     f<span class="token operator">=</span>xlsxwriter<span class="token punctuation">.</span>Workbook<span class="token punctuation">(</span><span class="token string">'/etc/files/static/download/hostmodel.xlsx'</span><span class="token punctuation">)</span>     bold_head <span class="token operator">=</span> f<span class="token punctuation">.</span>add_format<span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>             <span class="token string">'bold'</span><span class="token punctuation">:</span>  <span class="token boolean">True</span><span class="token punctuation">,</span>  <span class="token comment"># 字体加粗</span>             <span class="token string">'border'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>  <span class="token comment"># 单元格边框宽度</span>             <span class="token string">'align'</span><span class="token punctuation">:</span> <span class="token string">'left'</span><span class="token punctuation">,</span>  <span class="token comment"># 水平对齐方式</span>             <span class="token string">'valign'</span><span class="token punctuation">:</span> <span class="token string">'vcenter'</span><span class="token punctuation">,</span>  <span class="token comment"># 垂直对齐方式</span>             <span class="token string">'fg_color'</span><span class="token punctuation">:</span> <span class="token string">'#48D1CC'</span><span class="token punctuation">,</span>  <span class="token comment"># 单元格背景颜色</span>             <span class="token string">'text_wrap'</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">,</span>  <span class="token comment"># 是否自动换行</span>         <span class="token punctuation">}</span><span class="token punctuation">)</span>      worksheet1<span class="token operator">=</span>f<span class="token punctuation">.</span>add_worksheet<span class="token punctuation">(</span><span class="token string">'服务器模板'</span><span class="token punctuation">)</span>     data<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'服务器IP'</span><span class="token punctuation">,</span><span class="token string">'服务器名称'</span><span class="token punctuation">]</span>     worksheet1<span class="token punctuation">.</span>write_row<span class="token punctuation">(</span><span class="token string">"A1"</span><span class="token punctuation">,</span>data<span class="token punctuation">,</span>bold_head<span class="token punctuation">)</span>       tmp<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>     host_list<span class="token operator">=</span>Host_List<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token keyword">for</span> var <span class="token keyword">in</span> host_list<span class="token punctuation">:</span>         tmp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>var<span class="token punctuation">.</span>host_ip<span class="token punctuation">)</span>         worksheet1<span class="token punctuation">.</span>data_validation<span class="token punctuation">(</span><span class="token string">"A2:A1000"</span><span class="token punctuation">,</span> <span class="token punctuation">{<!-- --></span><span class="token string">'validate'</span><span class="token punctuation">:</span><span class="token string">'list'</span><span class="token punctuation">,</span> <span class="token string">'source'</span><span class="token punctuation">:</span>tmp<span class="token punctuation">}</span><span class="token punctuation">)</span>         	              tmp<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>         tmp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>var<span class="token punctuation">.</span>host_ip<span class="token punctuation">)</span>         tmp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>var<span class="token punctuation">.</span>host_name<span class="token punctuation">)</span>         result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>tmp<span class="token punctuation">)</span>     <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>         worksheet1<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>         worksheet1<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>result<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>          f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>     result<span class="token operator">=</span>download_template<span class="token punctuation">(</span>request<span class="token punctuation">,</span><span class="token string">'hostmodel.xlsx'</span><span class="token punctuation">)</span>     <span class="token keyword">return</span> result  </code></pre> <h2> <a id="filesjs_137" rel="nofollow"></a>files.js</h2> <pre><code class="prism language-javascript"><span class="token keyword">function</span> <span class="token function">fileupload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 	<span class="token keyword">var</span> form_data<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token keyword">var</span> file_info<span class="token operator">=</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'input[name="file"]'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token keyword">var</span> isok<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>     form_data<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'file'</span><span class="token punctuation">,</span>file_info<span class="token punctuation">)</span><span class="token punctuation">;</span>     $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>       url<span class="token operator">:</span><span class="token string">'/upload/'</span><span class="token punctuation">,</span>       type<span class="token operator">:</span><span class="token string">'POST'</span><span class="token punctuation">,</span>       async<span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>       data<span class="token operator">:</span>form_data<span class="token punctuation">,</span>       processData<span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>       contentType<span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>       <span class="token function-variable function">success</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>           console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'return:'</span><span class="token operator">+</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span> 		      json_data<span class="token operator">=</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span> 		      <span class="token keyword">if</span><span class="token punctuation">(</span>json_data<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'modelerror'</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 		      	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'模板类型异常'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 		      	<span class="token punctuation">}</span> 		      <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>json_data<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'dumplicate'</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 		      	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'导入文件中存在重复IP：'</span><span class="token operator">+</span>json_data<span class="token punctuation">[</span><span class="token string">'host_ip'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  		      	<span class="token punctuation">}</span> 		      <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>json_data<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'exists'</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 		      	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'IP已存在：'</span><span class="token operator">+</span>json_data<span class="token punctuation">[</span><span class="token string">'host_ip'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 		      	<span class="token punctuation">}</span> 		      <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>json_data<span class="token punctuation">[</span><span class="token string">'status'</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string">'success'</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 		      	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'导入成功'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 		      	<span class="token punctuation">}</span> 		      <span class="token keyword">else</span><span class="token punctuation">{<!-- --></span> 		      	<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'导入失败，原因请分析'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 		      	<span class="token punctuation">}</span> 		      	 		    	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'return:'</span><span class="token operator">+</span>json_data<span class="token punctuation">)</span><span class="token punctuation">;</span> 		    	isok<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>				 		 		<span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span>  <span class="token keyword">function</span> <span class="token function">filedownload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href<span class="token operator">=</span><span class="token string">'/download/'</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span> </code></pre> <h2> <a id="uploadhtmlhtml_188" rel="nofollow"></a>upload.html-编写html实现逻辑</h2> <pre><code class="prism language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-group<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>input-group<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-control<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>选择文件<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>filename<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>file<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>file<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>form-control<span class="token punctuation">"</span></span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">position</span><span class="token punctuation">:</span>absolute<span class="token punctuation">;</span><span class="token property">z-index</span><span class="token punctuation">:</span> 10<span class="token punctuation">;</span><span class="token property">opacity</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span> <span class="token punctuation">/&gt;</span></span>                                           <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>king-btn king-info<span class="token punctuation">"</span></span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">margin-left</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fileupload<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>导入<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span> </code></pre> <h2> <a id="downloadhtml_199" rel="nofollow"></a>download.html</h2> <pre><code class="prism language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>king-btn king-info<span class="token punctuation">"</span></span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">margin-left</span><span class="token punctuation">:</span>10px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>filedownload<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>导出<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span> </code></pre> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-108597.htm">用 docker 部署kafka</a></p>
+                                        <p>下一个：<a href="/news/article-109451.htm">iOS全埋点解决方案-控件点击事件</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-91691.htm" title="质量好的宠物服装（质量好的宠物服装品牌）">质量好的宠物服装（质量好的宠物服装品牌）</a></li>
+                        <li class="py-2"><a href="/news/article-99888.htm" title="猫三联一共几针,多少钱包括狂犬疫苗（猫三联是几针啊）">猫三联一共几针,多少钱包括狂犬疫苗（猫三联是几针啊）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-15-free-node-subscribe-links.htm" title="「4月15日」最高速度21.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「4月15日」最高速度21.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-102014.htm" title="养猫的人是不是有病了（养猫咪的人会得什么病）">养猫的人是不是有病了（养猫咪的人会得什么病）</a></li>
+                        <li class="py-2"><a href="/news/article-85838.htm" title="CentOS 7.6环境设置Redis开机自启动">CentOS 7.6环境设置Redis开机自启动</a></li>
+                        <li class="py-2"><a href="/news/article-96913.htm" title="猫驱虫多少钱一只啊（一般猫驱虫多少钱）">猫驱虫多少钱一只啊（一般猫驱虫多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-8-free-high-speed-nodes.htm" title="「4月8日」最高速度19.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「4月8日」最高速度19.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-30-node-share-links.htm" title="「4月30日」最高速度18.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「4月30日」最高速度18.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/news/article-106974.htm" title="Python数据结构-列表">Python数据结构-列表</a></li>
+                        <li class="py-2"><a href="/news/article-98386.htm" title="动物的疫苗多少钱一次（动物疫苗价格）">动物的疫苗多少钱一次（动物疫苗价格）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">12</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">86</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section class="w3l-market-footer">
+        <footer class="footer-28">
+            <div class="footer-bg-layer">
+                <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+                    <div class="container">
+                        <p class="copy-footer-28 text-center">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            Free Clash Meta免费节点分享站 版权所有
+                            <br />
+                            Powered by WordPress
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" title="Go to top">
+            &#10548;
+        </button>
+        <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <!-- /move top -->
+    </section>
+    <!-- //footer-28 block -->
+    <!-- jQuery, Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/freeclashmeta/bootstrap.min.js"></script>
+    <!-- Template JavaScript -->
+    <script src="/assets/website/js/frontend/freeclashmeta/owl.carousel.js"></script>
+    <!-- script for owlcarousel -->
+    <script>
+    $(document).ready(function() {
+        $('.owl-one').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                480: {
+                    items: 1,
+                    nav: false
+                },
+                667: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true
+                }
+            }
+        })
+    })
+    </script>
+    <!-- //script for owlcarousel -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <script src="/assets/website/js/frontend/freeclashmeta/jquery.magnific-popup.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+    </script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
