@@ -144,11 +144,6 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的节点自动测速功能如何配置？</h5></div>
-    <div class="panel-body">
-        Matsuri 可以设置测速周期和节点列表，程序会自动测试延迟和速度并排序。用户可根据测试结果选择最佳节点，提高网络访问速度和使用体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray QUIC 传输适合什么网络环境？</h5></div>
     <div class="panel-body">
         QUIC 基于 UDP 支持多路复用和零握手，降低延迟，提高吞吐量。适合高丢包、不稳定网络环境，可保证视频、游戏和即时通讯流量的稳定性和流畅体验。<hr />    </div>
@@ -159,29 +154,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         伪装域名必须真实可访问且证书有效，否则无法建立连接。正确配置可隐藏真实流量特征，降低被封锁和检测风险，提高节点安全性和长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 协议的多路复用功能如何提升性能？</h5></div>
-    <div class="panel-body">
-        SSR 多路复用允许多个短连接共享同一通道，减少握手次数和加密开销。适合游戏、即时通讯等高频短连接场景，提升网络吞吐量和连接稳定性，提高整体上网体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 的多机场订阅如何整合？</h5></div>
-    <div class="panel-body">
-        Hiddify Next 提供合并订阅功能，可将多个链接导入同一配置，自动去重并分类节点。用户可设置优先级与标签，方便快速选择不同提供商的线路，提升连接灵活性与冗余度。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
     <div class="panel-body">
         Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
+    <div class="panel-heading"><h5>SSR 协议的多路复用功能如何提升性能？</h5></div>
     <div class="panel-body">
-        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
+        SSR 多路复用允许多个短连接共享同一通道，减少握手次数和加密开销。适合游戏、即时通讯等高频短连接场景，提升网络吞吐量和连接稳定性，提高整体上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 gRPC 模式适合哪些场景？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 的分组策略可以自动切换节点吗？</h5></div>
     <div class="panel-body">
-        gRPC 支持多路复用和长连接，适合高并发访问和移动网络场景。相比 TCP 或 WebSocket，它可以减少握手次数，降低延迟，同时提高连接稳定性和吞吐量，特别适合游戏或即时通讯。<hr />    </div>
+        可以。用户可以设置策略组，PassWall2 会定期测速并根据延迟或成功率自动选择最优节点，实现智能节点切换，保证网络稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 的路由规则能否实现分国家代理？</h5></div>
@@ -189,9 +174,24 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Sing-box 支持 GeoIP 路由规则，通过引入国家数据库可根据 IP 自动判断地理位置。例如可设置 CN 走直连，US/JP 走代理，以此实现分国家策略路由，适合需要访问不同地区内容的用户。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的分组策略可以自动切换节点吗？</h5></div>
+    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
     <div class="panel-body">
-        可以。用户可以设置策略组，PassWall2 会定期测速并根据延迟或成功率自动选择最优节点，实现智能节点切换，保证网络稳定性。    </div>
+        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 的节点自动测速功能如何配置？</h5></div>
+    <div class="panel-body">
+        Matsuri 可以设置测速周期和节点列表，程序会自动测试延迟和速度并排序。用户可根据测试结果选择最佳节点，提高网络访问速度和使用体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 的多机场订阅如何整合？</h5></div>
+    <div class="panel-body">
+        Hiddify Next 提供合并订阅功能，可将多个链接导入同一配置，自动去重并分类节点。用户可设置优先级与标签，方便快速选择不同提供商的线路，提升连接灵活性与冗余度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 gRPC 模式适合哪些场景？</h5></div>
+    <div class="panel-body">
+        gRPC 支持多路复用和长连接，适合高并发访问和移动网络场景。相比 TCP 或 WebSocket，它可以减少握手次数，降低延迟，同时提高连接稳定性和吞吐量，特别适合游戏或即时通讯。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -220,16 +220,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-free-node-subscribe-links.htm" title="「10月14日」最高速度19.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月14日」最高速度19.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-17-free-subscribe-node.htm" title="「11月17日」最高速度22M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月17日」最高速度22M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-26-free-node-subscribe.htm" title="「10月26日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月26日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-17-free-high-speed-nodes.htm" title="「10月17日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月17日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-free-subscribe-node.htm" title="「10月15日」最高速度20.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月15日」最高速度20.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-11-free-node-subscribe-links.htm" title="「10月11日」最高速度21.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月11日」最高速度21.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-3-free-node-subscribe-links.htm" title="「10月3日」最高速度19.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月3日」最高速度19.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-4-node-share-links.htm" title="「11月4日」最高速度20.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月4日」最高速度20.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-6-free-node-subscribe-links.htm" title="「11月6日」最高速度21.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月6日」最高速度21.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-node-share-links.htm" title="「10月19日」最高速度19.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月19日」最高速度19.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-19-free-high-speed-nodes.htm" title="「11月19日」最高速度20.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月19日」最高速度20.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-2-free-high-speed-nodes.htm" title="「12月2日」最高速度19.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「12月2日」最高速度19.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-node-share-links.htm" title="「11月7日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月7日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-3-free-subscribe-node.htm" title="「12月3日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「12月3日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-27-free-subscribe-node.htm" title="「11月27日」最高速度18.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月27日」最高速度18.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-20-free-node-subscribe.htm" title="「11月20日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月20日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-subscribe-node.htm" title="「11月8日」最高速度20.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月8日」最高速度20.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-node-subscribe-links.htm" title="「11月13日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月13日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-29-node-share-links.htm" title="「11月29日」最高速度21.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月29日」最高速度21.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe.htm" title="「11月14日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月14日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
                     </ul>
     </div>
 </div>
@@ -241,10 +241,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>

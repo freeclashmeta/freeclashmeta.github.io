@@ -293,9 +293,14 @@ A：汤不热主要用于突破外部网络限制，访问国外网站更为流�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 自动切换节点机制如何工作？</h5></div>
+    <div class="panel-heading"><h5>如何在 Clash for Android 中导入订阅链接？</h5></div>
     <div class="panel-body">
-        PassWall2 会根据节点延迟和丢包率测试结果，结合策略组自动选择最优节点处理流量。无需用户手动切换，保证网页、视频和游戏流量的速度和稳定性，优化网络体验。<hr />    </div>
+        Clash for Android 支持通过订阅链接快速导入节点。用户只需在配置界面中点击“新建配置”，选择“URL 导入”并粘贴订阅地址即可，程序会自动下载并解析所有节点配置。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 VMess gRPC 传输适合高延迟环境吗？</h5></div>
+    <div class="panel-body">
+        gRPC 支持长连接和多路复用，减少握手次数和连接延迟。高延迟环境下使用可保证流量稳定，特别适合移动网络和频繁访问海外网站的场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow TUN 模式如何拦截全局流量？</h5></div>
@@ -303,24 +308,14 @@ A：汤不热主要用于突破外部网络限制，访问国外网站更为流�
         TUN 模式会拦截系统 IP 层的所有流量，实现全局代理。相比 SOCKS5 只影响部分应用，TUN 可以覆盖游戏、视频和浏览器等所有流量，提高科学上网体验的全面性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 客户端延迟测试值不稳定怎么办？</h5></div>
-    <div class="panel-body">
-        可通过调整 Hysteria2 的 `recv_window` 与 `send_window` 参数改善传输性能，同时确保服务器带宽充足。若使用移动网络，建议启用 BBR 拥塞控制并降低测速频率以减少波动。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 的本地 PAC 模式与全局模式有什么区别？</h5></div>
     <div class="panel-body">
         PAC 模式通过规则文件自动判定哪些域名走代理，能兼顾速度与便利；全局模式则所有流量都通过代理，适合调试或访问被完全屏蔽的网络。两者可在界面一键切换，根据需求灵活选择。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 协议的安全性如何？</h5></div>
+    <div class="panel-heading"><h5>Hysteria2 客户端延迟测试值不稳定怎么办？</h5></div>
     <div class="panel-body">
-        Trojan 使用与 HTTPS 类似的 TLS 加密通道，使其数据流难以与普通网页访问区分。它兼具隐蔽性与安全性，几乎无法被防火墙检测。Trojan 协议的主要优势在于稳定、安全、兼容性强，因此广受高级用户青睐。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 VMess gRPC 传输适合高延迟环境吗？</h5></div>
-    <div class="panel-body">
-        gRPC 支持长连接和多路复用，减少握手次数和连接延迟。高延迟环境下使用可保证流量稳定，特别适合移动网络和频繁访问海外网站的场景。<hr />    </div>
+        可通过调整 Hysteria2 的 `recv_window` 与 `send_window` 参数改善传输性能，同时确保服务器带宽充足。若使用移动网络，建议启用 BBR 拥塞控制并降低测速频率以减少波动。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 协议混淆如何增强安全性？</h5></div>
@@ -333,14 +328,19 @@ A：汤不热主要用于突破外部网络限制，访问国外网站更为流�
         XTLS 降低加密开销，减少握手次数，适合高延迟或不稳定的移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何用 iptables 限制 V2Ray 服务的访问来源？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 自动切换节点机制如何工作？</h5></div>
     <div class="panel-body">
-        使用 iptables 规则仅允许可信 IP 或 CDN 的中转 IP 访问服务端口，例如 `iptables -A INPUT -p tcp -s <trusted_ip> --dport 443 -j ACCEPT`，并在默认策略下拒绝其他来源，从而降低被扫描与滥用风险。<hr />    </div>
+        PassWall2 会根据节点延迟和丢包率测试结果，结合策略组自动选择最优节点处理流量。无需用户手动切换，保证网页、视频和游戏流量的速度和稳定性，优化网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Clash for Android 中导入订阅链接？</h5></div>
+    <div class="panel-heading"><h5>Trojan 协议的安全性如何？</h5></div>
     <div class="panel-body">
-        Clash for Android 支持通过订阅链接快速导入节点。用户只需在配置界面中点击“新建配置”，选择“URL 导入”并粘贴订阅地址即可，程序会自动下载并解析所有节点配置。    </div>
+        Trojan 使用与 HTTPS 类似的 TLS 加密通道，使其数据流难以与普通网页访问区分。它兼具隐蔽性与安全性，几乎无法被防火墙检测。Trojan 协议的主要优势在于稳定、安全、兼容性强，因此广受高级用户青睐。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何用 iptables 限制 V2Ray 服务的访问来源？</h5></div>
+    <div class="panel-body">
+        使用 iptables 规则仅允许可信 IP 或 CDN 的中转 IP 访问服务端口，例如 `iptables -A INPUT -p tcp -s <trusted_ip> --dport 443 -j ACCEPT`，并在默认策略下拒绝其他来源，从而降低被扫描与滥用风险。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -369,16 +369,16 @@ A：汤不热主要用于突破外部网络限制，访问国外网站更为流�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-11-11-free-node-subscribe-links.htm" title="「11月11日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月11日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-9-node-share-links.htm" title="「10月9日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月9日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe.htm" title="「11月14日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月14日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-5-node-share-links.htm" title="「10月5日」最高速度21.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月5日」最高速度21.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-3-free-high-speed-nodes.htm" title="「11月3日」最高速度20.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月3日」最高速度20.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-24-node-share.htm" title="「10月24日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月24日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-8-free-high-speed-nodes.htm" title="「10月8日」最高速度18.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月8日」最高速度18.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-23-node-share-links.htm" title="「11月23日」最高速度22M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月23日」最高速度22M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-12-node-share-links.htm" title="「11月12日」最高速度18.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月12日」最高速度18.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-free-subscribe-node.htm" title="「10月15日」最高速度20.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月15日」最高速度20.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-16-node-share-links.htm" title="「10月16日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「10月16日」最高速度21.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-1-node-share.htm" title="「12月1日」最高速度21M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「12月1日」最高速度21M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-node-share-links.htm" title="「11月7日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月7日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-19-free-high-speed-nodes.htm" title="「11月19日」最高速度20.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月19日」最高速度20.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-14-free-node-subscribe.htm" title="「11月14日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月14日」最高速度18.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-20-free-node-subscribe.htm" title="「11月20日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月20日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-27-free-subscribe-node.htm" title="「11月27日」最高速度18.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月27日」最高速度18.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-26-free-high-speed-nodes.htm" title="「11月26日」最高速度18M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月26日」最高速度18M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-node-subscribe-links.htm" title="「11月13日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「11月13日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></li>
                     </ul>
     </div>
 </div>
@@ -390,10 +390,10 @@ A：汤不热主要用于突破外部网络限制，访问国外网站更为流�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>
