@@ -1,4 +1,4 @@
-# 「5月12日」最高速度20.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址  更新时间 2026-05-12 09:07:13
+# 「5月19日」最高速度18M/S，2025年Free Clash Meta每天更新免费节点订阅地址  更新时间 2026-05-19 10:52:12
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freeclashmeta.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://freeclashmeta.github.io/uploads/2026/05/0-20260512.yaml
-- https://freeclashmeta.github.io/uploads/2026/05/1-20260512.yaml
-- https://freeclashmeta.github.io/uploads/2026/05/2-20260512.yaml
-- https://freeclashmeta.github.io/uploads/2026/05/3-20260512.yaml
-- https://freeclashmeta.github.io/uploads/2026/05/4-20260512.yaml
+- https://freeclashmeta.github.io/uploads/2026/05/0-20260519.yaml
+- https://freeclashmeta.github.io/uploads/2026/05/1-20260519.yaml
+- https://freeclashmeta.github.io/uploads/2026/05/2-20260519.yaml
+- https://freeclashmeta.github.io/uploads/2026/05/3-20260519.yaml
+- https://freeclashmeta.github.io/uploads/2026/05/4-20260519.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://freeclashmeta.github.io/uploads/2026/05/0-20260512.txt
-- https://freeclashmeta.github.io/uploads/2026/05/1-20260512.txt
-- https://freeclashmeta.github.io/uploads/2026/05/2-20260512.txt
-- https://freeclashmeta.github.io/uploads/2026/05/3-20260512.txt
-- https://freeclashmeta.github.io/uploads/2026/05/4-20260512.txt
+- https://freeclashmeta.github.io/uploads/2026/05/0-20260519.txt
+- https://freeclashmeta.github.io/uploads/2026/05/1-20260519.txt
+- https://freeclashmeta.github.io/uploads/2026/05/2-20260519.txt
+- https://freeclashmeta.github.io/uploads/2026/05/3-20260519.txt
+- https://freeclashmeta.github.io/uploads/2026/05/4-20260519.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://freeclashmeta.github.io/uploads/2026/05/20260512.json
+- https://freeclashmeta.github.io/uploads/2026/05/20260519.json
 
 ## 更多Clash节点订阅 ：
 
