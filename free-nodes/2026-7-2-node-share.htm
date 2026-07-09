@@ -302,17 +302,18 @@ A：不是。等级固然重要，但策略与时机判断在中低段位往往�
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-7-1-node-share-links.htm">「7月1日」最高速度19.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></p>
+        <p>下一个：<a href="/free-nodes/2026-7-3-free-high-speed-nodes.htm">「7月3日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a></p>
     </div>
 <h4>FAQ</h4>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2RayN 与 WinXray 哪个更易用？</h5></div>
+    <div class="panel-body">
+        V2RayN 界面更简洁，功能更稳定，而 WinXray 提供了更现代的界面和自动测速功能。对于初学者来说，V2RayN 上手更快；而追求高级功能的用户可能更喜欢 WinXray。<hr />    </div>
+</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Matsuri 的多节点测速机制是怎样的？</h5></div>
     <div class="panel-body">
         Matsuri 使用并发测速机制，可同时对多个节点进行延迟与带宽测试。测试结果会自动排序，并可根据延迟或速度自动切换最优节点，提升连接体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
-    <div class="panel-body">
-        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 如何实现节点订阅自动更新？</h5></div>
@@ -320,19 +321,14 @@ A：不是。等级固然重要，但策略与时机判断在中低段位往往�
         用户可添加订阅 URL，Nekoray 定期自动下载并更新节点。这样可保持节点列表最新，有效减少手动维护，提高使用效率，同时保证网络连接稳定和可靠。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
+    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
     <div class="panel-body">
-        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。<hr />    </div>
+        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLess 为什么被认为是未来趋势？</h5></div>
+    <div class="panel-heading"><h5>VMess 与 Shadowsocks 哪个更安全？</h5></div>
     <div class="panel-body">
-        VLess 去掉了内置加密层，改为依赖外部 TLS 进行安全通信，这使其更轻量化且更灵活。它能与 Hysteria、Reality 等现代传输方式结合使用，适应性更强，是取代 Vmess 的新标准。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2RayN 与 WinXray 哪个更易用？</h5></div>
-    <div class="panel-body">
-        V2RayN 界面更简洁，功能更稳定，而 WinXray 提供了更现代的界面和自动测速功能。对于初学者来说，V2RayN 上手更快；而追求高级功能的用户可能更喜欢 WinXray。<hr />    </div>
+        VMess 使用动态认证机制，防止重放攻击，而 Shadowsocks 依赖静态密钥。总体来说，VMess 的安全性更强，尤其在应对 DPI 检测和中间人攻击时表现更优。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 的订阅更新机制如何运作？</h5></div>
@@ -345,14 +341,19 @@ A：不是。等级固然重要，但策略与时机判断在中低段位往往�
         在 Clash 的规则文件中添加 PROCESS-NAME 规则，如 `PROCESS-NAME,chrome.exe,DIRECT`。保存并重启后，该应用的流量将绕过代理直连。适用于游戏或内网程序等特殊场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 与 Shadowsocks 哪个更安全？</h5></div>
+    <div class="panel-heading"><h5>Hysteria2 使用哪种加密算法？</h5></div>
     <div class="panel-body">
-        VMess 使用动态认证机制，防止重放攻击，而 Shadowsocks 依赖静态密钥。总体来说，VMess 的安全性更强，尤其在应对 DPI 检测和中间人攻击时表现更优。<hr />    </div>
+        Hysteria2 默认使用 AEAD 加密算法（如 ChaCha20-Poly1305），并可结合 TLS 层加密保障安全性。其设计兼顾速度与抗干扰能力，适合高延迟跨境网络环境。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash Premium 与普通版本有何不同？</h5></div>
     <div class="panel-body">
-        Clash Premium 是 Clash 的增强版，增加了 TUN 模式、脚本功能、流量统计与规则订阅等高级特性。它更适合有复杂分流需求的用户，尤其是需要对系统级代理进行全局控制的场景。    </div>
+        Clash Premium 是 Clash 的增强版，增加了 TUN 模式、脚本功能、流量统计与规则订阅等高级特性。它更适合有复杂分流需求的用户，尤其是需要对系统级代理进行全局控制的场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLess 为什么被认为是未来趋势？</h5></div>
+    <div class="panel-body">
+        VLess 去掉了内置加密层，改为依赖外部 TLS 进行安全通信，这使其更轻量化且更灵活。它能与 Hysteria、Reality 等现代传输方式结合使用，适应性更强，是取代 Vmess 的新标准。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -382,11 +383,11 @@ A：不是。等级固然重要，但策略与时机判断在中低段位往往�
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">
+                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
                     <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">星辰机场</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
                     <dd>
                         <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
@@ -400,16 +401,16 @@ A：不是。等级固然重要，但策略与时机判断在中低段位往往�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-6-19-free-high-speed-nodes.htm" title="「6月19日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月19日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-22-node-share.htm" title="「5月22日」最高速度20.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「5月22日」最高速度20.4M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-15-node-share-links.htm" title="「6月15日」最高速度21.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月15日」最高速度21.8M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-3-free-subscribe-node.htm" title="「5月3日」最高速度22.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「5月3日」最高速度22.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-1-node-share-links.htm" title="「6月1日」最高速度21.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月1日」最高速度21.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-10-node-share.htm" title="「6月10日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月10日」最高速度22.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-5-node-share-links.htm" title="「6月5日」最高速度19.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月5日」最高速度19.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-6-22-free-subscribe-node.htm" title="「6月22日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月22日」最高速度19.1M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-28-free-subscribe-node.htm" title="「6月28日」最高速度22.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月28日」最高速度22.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-27-node-share-links.htm" title="「6月27日」最高速度20.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月27日」最高速度20.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-7-node-share-links.htm" title="「7月7日」最高速度20.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「7月7日」最高速度20.7M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-13-node-share-links.htm" title="「6月13日」最高速度22.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月13日」最高速度22.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-30-free-subscribe-node.htm" title="「6月30日」最高速度18.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月30日」最高速度18.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-6-26-free-subscribe-node.htm" title="「6月26日」最高速度19.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月26日」最高速度19.3M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-9-node-share-links.htm" title="「7月9日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「7月9日」最高速度19.2M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-6-9-free-high-speed-nodes.htm" title="「6月9日」最高速度19.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「6月9日」最高速度19.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-5-free-node-subscribe-links.htm" title="「5月5日」最高速度22.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「5月5日」最高速度22.5M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-3-free-high-speed-nodes.htm" title="「7月3日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「7月3日」最高速度18.6M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-7-2-node-share.htm" title="「7月2日」最高速度22.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址">「7月2日」最高速度22.9M/S，2025年Free Clash Meta每天更新免费节点订阅地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -421,13 +422,10 @@ A：不是。等级固然重要，但策略与时机判断在中低段位往往�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2026-06/" title="2026-06 归档">2026-06</a></h4>
             </li>
                     </ul>
     </div>
@@ -456,7 +454,7 @@ A：不是。等级固然重要，但策略与时机判断在中低段位往往�
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=" data-type="Xingchen" data-code="register&code" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                                 Free Clash Meta免费节点分享站 版权所有
                             <br />
                             Powered by WordPress
